@@ -1,0 +1,710 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-25 22:07-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\pedidos\templates\controleVendas.html:9
+msgid "Pesquise por produtos"
+msgstr ""
+
+#: .\pedidos\templates\controleVendas.html:10
+#: .\pedidos\templates\pedidosHistory.html:15
+#: .\produtos\templates\produtos.html:16
+msgid "Filtrar"
+msgstr "Filtrar"
+
+#: .\pedidos\templates\controleVendas.html:15
+#, fuzzy
+#| msgid "Produtos"
+msgid "ID Produto"
+msgstr "Productos"
+
+#: .\pedidos\templates\controleVendas.html:16
+#: .\pedidos\templates\cozinha.html:12 .\pedidos\templates\cozinha.html:48
+#: .\pedidos\templates\meusPedidos.html:14
+#: .\pedidos\templates\meusPedidos.html:46
+#: .\pedidos\templates\meusPedidos.html:76
+#: .\produtos\templates\ativarProduto.html:8
+#: .\produtos\templates\cadastrarProduto.html:23
+#: .\produtos\templates\editarProduto.html:11
+#: .\produtos\templates\garcom.html:12 .\produtos\templates\garcom.html:48
+#: .\produtos\templates\produtos.html:22
+msgid "Nome Produto"
+msgstr "Nombre Product"
+
+#: .\pedidos\templates\controleVendas.html:17
+msgid "Qtde. Vendida"
+msgstr ""
+
+#: .\pedidos\templates\cozinha.html:7 .\pedidos\templates\meusPedidos.html:8
+msgid "Pedidos Pendentes"
+msgstr ""
+
+#: .\pedidos\templates\cozinha.html:11 .\pedidos\templates\cozinha.html:47
+#: .\pedidos\templates\meusPedidos.html:13
+#: .\pedidos\templates\meusPedidos.html:45
+#: .\pedidos\templates\meusPedidos.html:75 .\produtos\templates\garcom.html:11
+#: .\produtos\templates\garcom.html:47
+msgid "Número Pedido"
+msgstr ""
+
+#: .\pedidos\templates\cozinha.html:13 .\pedidos\templates\cozinha.html:49
+#: .\pedidos\templates\imprimirPedidosCliente.html:13
+#: .\pedidos\templates\meusPedidos.html:15
+#: .\pedidos\templates\meusPedidos.html:47
+#: .\pedidos\templates\meusPedidos.html:77
+#: .\pedidos\templates\pedidosHistory.html:24
+#: .\produtos\templates\garcom.html:13 .\produtos\templates\garcom.html:49
+#, fuzzy
+#| msgid "Preço Produto"
+msgid "Preço Unitário"
+msgstr "Precio del Producto"
+
+#: .\pedidos\templates\cozinha.html:14 .\pedidos\templates\cozinha.html:50
+#: .\pedidos\templates\imprimirPedidosCliente.html:13
+#: .\pedidos\templates\meusPedidos.html:16
+#: .\pedidos\templates\meusPedidos.html:48
+#: .\pedidos\templates\meusPedidos.html:78
+#: .\pedidos\templates\pedidosHistory.html:23
+#: .\produtos\templates\detalhesProduto.html:17
+#: .\produtos\templates\garcom.html:14 .\produtos\templates\garcom.html:50
+msgid "Quantidade"
+msgstr ""
+
+#: .\pedidos\templates\cozinha.html:15 .\pedidos\templates\cozinha.html:51
+#: .\pedidos\templates\meusPedidos.html:17
+#: .\pedidos\templates\meusPedidos.html:49
+#: .\pedidos\templates\meusPedidos.html:79
+#: .\pedidos\templates\pedidosHistory.html:25
+#: .\produtos\templates\garcom.html:15 .\produtos\templates\garcom.html:51
+msgid "Valor Total"
+msgstr ""
+
+#: .\pedidos\templates\cozinha.html:16 .\pedidos\templates\cozinha.html:52
+#: .\pedidos\templates\meusPedidos.html:18
+#: .\pedidos\templates\meusPedidos.html:50
+#: .\pedidos\templates\meusPedidos.html:80
+#: .\pedidos\templates\pedidosHistory.html:26
+#: .\produtos\templates\garcom.html:16 .\produtos\templates\garcom.html:52
+#, fuzzy
+#| msgid "Status Produto"
+msgid "Status Pedido"
+msgstr "Status Product"
+
+#: .\pedidos\templates\cozinha.html:17 .\pedidos\templates\meusPedidos.html:19
+msgid "Dt_Hr_Inserção"
+msgstr ""
+
+#: .\pedidos\templates\cozinha.html:18 .\pedidos\templates\cozinha.html:54
+#: .\pedidos\templates\detalhesConta.html:11
+#: .\pedidos\templates\fecharConta.html:12
+#: .\pedidos\templates\meusPedidos.html:12
+#: .\pedidos\templates\meusPedidos.html:44
+#: .\pedidos\templates\meusPedidos.html:74
+#: .\pedidos\templates\pedidosHistory.html:20
+#: .\produtos\templates\garcom.html:18 .\produtos\templates\garcom.html:54
+#: .\usuarios\templates\cadastrarUsuario.html:12
+#: .\usuarios\templates\editarPerfil.html:12
+#: .\usuarios\templates\editarUsuario.html:12
+#: .\usuarios\templates\listarUsuarios.html:11
+#: .\usuarios\templates\loginUser.html:12
+msgid "Usuário"
+msgstr "Usuario"
+
+#: .\pedidos\templates\cozinha.html:19
+#: .\pedidos\templates\detalhesConta.html:14
+#: .\pedidos\templates\fecharConta.html:15
+#: .\pedidos\templates\meusPedidos.html:20 .\produtos\templates\garcom.html:19
+msgid "Ação"
+msgstr ""
+
+#: .\pedidos\templates\cozinha.html:35
+#, fuzzy
+#| msgid "Produtos"
+msgid "Pronto"
+msgstr "Productos"
+
+#: .\pedidos\templates\cozinha.html:43 .\pedidos\templates\meusPedidos.html:40
+#: .\produtos\templates\garcom.html:7
+#, fuzzy
+#| msgid "Preço Produto"
+msgid "Pedidos Prontos"
+msgstr "Precio del Producto"
+
+#: .\pedidos\templates\cozinha.html:53 .\pedidos\templates\meusPedidos.html:51
+#: .\pedidos\templates\pedidosHistory.html:28
+#: .\produtos\templates\garcom.html:17
+#, fuzzy
+#| msgid "Produtos"
+msgid "Dt_Hr_Pronto"
+msgstr "Productos"
+
+#: .\pedidos\templates\detalhesConta.html:7
+msgid "Detalhes Conta Cliente"
+msgstr ""
+
+#: .\pedidos\templates\detalhesConta.html:12
+#: .\pedidos\templates\fecharConta.html:13
+#, fuzzy
+#| msgid "Status Produto"
+msgid "Qtde. Pedidos"
+msgstr "Status Product"
+
+#: .\pedidos\templates\detalhesConta.html:13
+#: .\pedidos\templates\fecharConta.html:14
+msgid "Imprimir Pedido Cliente"
+msgstr ""
+
+#: .\pedidos\templates\detalhesConta.html:22
+#: .\pedidos\templates\fecharConta.html:23
+msgid "Imprimir Pedido"
+msgstr ""
+
+#: .\pedidos\templates\detalhesConta.html:23
+#: .\pedidos\templates\fecharConta.html:24
+msgid "Fechar Conta"
+msgstr ""
+
+#: .\pedidos\templates\fecharConta.html:7 .\tutorial\templates\base.html:53
+msgid "Fechar Conta Cliente"
+msgstr ""
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:5
+msgid "Imprimir Pedidos Cliente"
+msgstr ""
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:12
+#, fuzzy
+#| msgid "Preço Produto"
+msgid "Pedidos Cliente"
+msgstr "Precio del Producto"
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:13
+#: .\pedidos\templates\pedidosHistory.html:21
+#, fuzzy
+#| msgid "Status Produto"
+msgid "Nr. Pedido"
+msgstr "Status Product"
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:13
+#: .\pedidos\templates\pedidosHistory.html:22
+#, fuzzy
+#| msgid "Produtos"
+msgid "Produto"
+msgstr "Productos"
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:13
+msgid "Total"
+msgstr ""
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:13
+#: .\produtos\templates\produtos.html:25
+msgid "Status"
+msgstr "Estado"
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:26
+msgid "Total: R$"
+msgstr ""
+
+#: .\pedidos\templates\meusPedidos.html:70 .\produtos\templates\garcom.html:43
+msgid "Pedidos Entregues"
+msgstr ""
+
+#: .\pedidos\templates\meusPedidos.html:81
+#: .\pedidos\templates\pedidosHistory.html:29
+#: .\produtos\templates\garcom.html:53
+msgid "Dt_Hr_Entregue"
+msgstr ""
+
+#: .\pedidos\templates\pedidosHistory.html:10
+#, fuzzy
+#| msgid "Selecione uma Categoria"
+msgid "Selecione uma Data"
+msgstr "Seleccione una categoría"
+
+#: .\pedidos\templates\pedidosHistory.html:27
+msgid "Dt_Hr_Pedido"
+msgstr ""
+
+#: .\pedidos\views.py:86
+msgid "Existem Pedidos Pendentes, não é possível fechar a conta"
+msgstr ""
+
+#: .\pedidos\views.py:92
+msgid "Conta Fechada com sucesso!"
+msgstr ""
+
+#: .\pedidos\views.py:102
+msgid "Pedido excluído com sucesso!"
+msgstr ""
+
+#: .\produtos\templates\ativarProduto.html:14
+#: .\produtos\templates\cadastrarProduto.html:26
+#: .\produtos\templates\editarProduto.html:14
+msgid "Status Produto"
+msgstr "Status Product"
+
+#: .\produtos\templates\ativarProduto.html:16
+#: .\produtos\templates\cadastrarProduto.html:27
+#: .\produtos\templates\editarProduto.html:15
+msgid "Ativo"
+msgstr "Activo"
+
+#: .\produtos\templates\ativarProduto.html:17
+#: .\produtos\templates\cadastrarProduto.html:28
+#: .\produtos\templates\editarProduto.html:16
+msgid "Inativo"
+msgstr "Inactivo"
+
+#: .\produtos\templates\ativarProduto.html:18
+msgid "Salvar"
+msgstr "Ahorrar"
+
+#: .\produtos\templates\cadastrarCategoria.html:16
+msgid "Cadastro de Categoria"
+msgstr "Registro de categoría"
+
+#: .\produtos\templates\cadastrarCategoria.html:19
+#: .\produtos\templates\categorias.html:11
+#: .\produtos\templates\editarCategoria.html:10
+msgid "Nome Categoria"
+msgstr "Nombre Categoria"
+
+#: .\produtos\templates\cadastrarCategoria.html:20
+#: .\produtos\templates\categorias.html:12
+#: .\produtos\templates\editarCategoria.html:11
+msgid "Descrição Categoria"
+msgstr "Descripción Categoría"
+
+#: .\produtos\templates\cadastrarCategoria.html:21
+#: .\produtos\templates\categorias.html:13
+#: .\produtos\templates\editarCategoria.html:12
+msgid "Status Categoria"
+msgstr "Status Categoria"
+
+#: .\produtos\templates\cadastrarCategoria.html:22
+#: .\produtos\templates\editarCategoria.html:13
+msgid "Ativa"
+msgstr "Activa"
+
+#: .\produtos\templates\cadastrarCategoria.html:23
+#: .\produtos\templates\editarCategoria.html:14
+msgid "Inativa"
+msgstr "Inactiva"
+
+#: .\produtos\templates\cadastrarCategoria.html:25
+#: .\produtos\templates\categorias.html:15
+#: .\produtos\templates\editarCategoria.html:16
+msgid "Imagem Categoria"
+msgstr "Imagen Categoria"
+
+#: .\produtos\templates\cadastrarCategoria.html:26
+#: .\produtos\templates\cadastrarProduto.html:31
+msgid "Escolher arquivo"
+msgstr ""
+
+#: .\produtos\templates\cadastrarCategoria.html:27
+#: .\produtos\templates\cadastrarProduto.html:32
+msgid "Nenhum arquivo selecionado"
+msgstr ""
+
+#: .\produtos\templates\cadastrarCategoria.html:29
+#: .\produtos\templates\cadastrarProduto.html:34
+#: .\produtos\templates\categorias.html:14
+#: .\produtos\templates\editarCategoria.html:20
+#: .\produtos\templates\editarProduto.html:18
+#: .\produtos\templates\produtos.html:26
+msgid "Idioma"
+msgstr "Idioma"
+
+#: .\produtos\templates\cadastrarCategoria.html:34
+#: .\produtos\templates\cadastrarProduto.html:45
+#: .\usuarios\templates\cadastrarUsuario.html:24
+msgid "Cadastrar"
+msgstr "Registrar"
+
+#: .\produtos\templates\cadastrarProduto.html:6
+#: .\produtos\templates\cadastrarProduto.html:19
+msgid "Cadastro de Produtos"
+msgstr "Registro de Productos"
+
+#: .\produtos\templates\cadastrarProduto.html:22
+#: .\produtos\templates\editarProduto.html:10
+#: .\produtos\templates\produtos.html:21
+msgid "Código Produto"
+msgstr "Código de Producto"
+
+#: .\produtos\templates\cadastrarProduto.html:24
+#: .\produtos\templates\editarProduto.html:12
+#: .\produtos\templates\produtos.html:23
+msgid "Descrição Produto"
+msgstr "Descripción del Producto"
+
+#: .\produtos\templates\cadastrarProduto.html:25
+#: .\produtos\templates\editarProduto.html:13
+#: .\produtos\templates\produtos.html:24
+msgid "Preço Produto"
+msgstr "Precio del Producto"
+
+#: .\produtos\templates\cadastrarProduto.html:30
+#: .\produtos\templates\editarProduto.html:32
+msgid "Imagem Produto"
+msgstr "Imagen Producto"
+
+#: .\produtos\templates\cadastrarProduto.html:39
+#: .\produtos\templates\editarProduto.html:25
+msgid "Categoria"
+msgstr "Categoria"
+
+#: .\produtos\templates\categorias.html:16
+#: .\produtos\templates\produtos.html:28
+#: .\usuarios\templates\listarUsuarios.html:16
+msgid "Editar"
+msgstr "Para editar"
+
+#: .\produtos\templates\categorias.html:17
+#: .\produtos\templates\produtos.html:29
+#: .\usuarios\templates\listarUsuarios.html:17
+msgid "Excluir"
+msgstr "Eliminar"
+
+#: .\produtos\templates\detalhesProduto.html:7
+#: .\produtos\templates\listProdutos.html:7
+msgid "Voltar"
+msgstr "Vuelve"
+
+#: .\produtos\templates\detalhesProduto.html:14
+msgid "Descrição"
+msgstr "Descripción"
+
+#: .\produtos\templates\detalhesProduto.html:15
+msgid "Preço"
+msgstr "Precio"
+
+#: .\produtos\templates\detalhesProduto.html:18
+msgid "Comprar"
+msgstr ""
+
+#: .\produtos\templates\editarCategoria.html:7
+msgid "Editar Categoria"
+msgstr "Editar Categoria"
+
+#: .\produtos\templates\editarCategoria.html:26
+#: .\usuarios\templates\editarPerfil.html:21
+#: .\usuarios\templates\editarUsuario.html:27
+msgid "Salvar Alterações"
+msgstr "Guardar ediciones"
+
+#: .\produtos\templates\editarProduto.html:7
+msgid "Alteração de Produto"
+msgstr "Cambio de producto"
+
+#: .\produtos\templates\editarProduto.html:36
+msgid "Atualizar Cadastro"
+msgstr "Actualizar registro"
+
+#: .\produtos\templates\garcom.html:35
+msgid "Entregue"
+msgstr ""
+
+#: .\produtos\templates\produtos.html:7
+msgid "Ativar Produto"
+msgstr "Activar producto"
+
+#: .\produtos\templates\produtos.html:11
+msgid "Selecione uma Categoria"
+msgstr "Seleccione una categoría"
+
+#: .\produtos\templates\produtos.html:27
+msgid "Imagem"
+msgstr "Imagen"
+
+#: .\produtos\views.py:206
+msgid "Categoria excluída com sucesso!"
+msgstr ""
+
+#: .\produtos\views.py:208
+msgid "Existem produtos associados a essa Categoria. Não é possível excluí-la"
+msgstr ""
+
+#: .\tutorial\templates\base.html:40
+#: .\tutorial\templates\registration\password_reset_confirm.html:11
+#: .\usuarios\templates\alterarSenha.html:15
+msgid "Alterar Senha"
+msgstr "Cambiar contraseña"
+
+#: .\tutorial\templates\base.html:43
+msgid "Editar Perfil"
+msgstr "Editar Perfil"
+
+#: .\tutorial\templates\base.html:47
+msgid "Cadastrar Usuário"
+msgstr "Registrar Usuario"
+
+#: .\tutorial\templates\base.html:50
+#, fuzzy
+#| msgid "Alterar Senha Usuário"
+msgid "Alterar Usuário"
+msgstr "Cambiar contraseña de usuario"
+
+#: .\tutorial\templates\base.html:58
+msgid "Meus Pedidos"
+msgstr ""
+
+#: .\tutorial\templates\base.html:77
+msgid "Menu Principal"
+msgstr "Nmenú Principal"
+
+#: .\tutorial\templates\base.html:79
+msgid "Menu"
+msgstr "Menú"
+
+#: .\tutorial\templates\base.html:81 .\tutorial\templates\base.html:90
+#: .\tutorial\templates\base.html:94
+msgid "Categorias"
+msgstr "Categorias"
+
+#: .\tutorial\templates\base.html:82 .\tutorial\templates\base.html:91
+#: .\tutorial\templates\base.html:95
+msgid "Produtos"
+msgstr "Productos"
+
+#: .\tutorial\templates\base.html:83
+msgid "Cadastrar Categoria"
+msgstr "Categoría de Registro"
+
+#: .\tutorial\templates\base.html:84
+msgid "Cadastrar Produto"
+msgstr "Registrar Produto"
+
+#: .\tutorial\templates\base.html:85 .\tutorial\templates\base.html:96
+msgid "Cozinha"
+msgstr ""
+
+#: .\tutorial\templates\base.html:86 .\tutorial\templates\base.html:92
+#, fuzzy
+#| msgid "Preço"
+msgid "Garçom"
+msgstr "Precio"
+
+#: .\tutorial\templates\base.html:87
+msgid "Histórico de Pedidos"
+msgstr ""
+
+#: .\tutorial\templates\base.html:88
+#, fuzzy
+#| msgid "Confirmação de Senha"
+msgid "Controle de Vendas"
+msgstr "Confirmación de contraseña"
+
+#: .\tutorial\templates\registration\password_reset_complete.html:7
+msgid "Sua senha foi alterada. Você pode fazer o "
+msgstr "Tu contraseña ha sido cambiada. Puedes hacer el "
+
+#: .\tutorial\templates\registration\password_reset_complete.html:7
+msgid "agora"
+msgstr "ahora"
+
+#: .\tutorial\templates\registration\password_reset_confirm.html:7
+msgid "Altere sua senha"
+msgstr "Cambia tu contraseña"
+
+#: .\tutorial\templates\registration\password_reset_confirm.html:16
+msgid ""
+"O link de resetar senha está incorreto, possivelmente porque ele já foi "
+"utilizado."
+msgstr ""
+"El enlace para restablecer la contraseña es incorrecto, posiblemente porque "
+"ya se ha usado."
+
+#: .\tutorial\templates\registration\password_reset_confirm.html:17
+msgid "Por favor, solicite um novo link para resetar sua senha."
+msgstr "Solicite un nuevo enlace para restablecer su contraseña."
+
+#: .\tutorial\templates\registration\password_reset_done.html:7
+msgid ""
+"Nós enviamos um email com as instruções para resetar sua senha, caso sua "
+"conta exista com o email informado."
+msgstr ""
+"Le hemos enviado un correo electrónico con instrucciones para restablecer su "
+"contraseña si su La cuenta existe con el correo electrónico proporcionado."
+
+#: .\tutorial\templates\registration\password_reset_done.html:8
+msgid "Você deve recebê-lo rapidamente."
+msgstr "Debería recibirlo rápidamente."
+
+#: .\tutorial\templates\registration\password_reset_done.html:11
+msgid ""
+"Caso você não receba um email, por favor verifique se informou o email "
+"correto que você tem registrado conosco,"
+msgstr ""
+"Si no recibe un correo electrónico, verifique que haya ingresado el correo "
+"electrónico corregir que se ha registrado con nosotros,"
+
+#: .\tutorial\templates\registration\password_reset_done.html:12
+msgid "e verifique sua pasta spam."
+msgstr "y revisa tu carpeta de spam."
+
+#: .\tutorial\templates\registration\password_reset_email.html:4
+msgid "Para iniciar o processo de resetar senha seu "
+msgstr "Para iniciar el proceso de restablecimiento de su contraseña"
+
+#: .\tutorial\templates\registration\password_reset_email.html:5
+msgid "clique no link abaixo:"
+msgstr "Haga clic en el enlace de abajo:"
+
+#: .\tutorial\templates\registration\password_reset_email.html:9
+msgid "Se o link não funcionar, por favor copie e cole a URL em um browser."
+msgstr "Si el enlace no funciona, copie y pegue la URL en un navegador."
+
+#: .\tutorial\templates\registration\password_reset_email.html:11
+msgid "Sinceramente,"
+msgstr "Sinceramente,"
+
+#: .\tutorial\templates\registration\password_reset_email.html:12
+msgid "Tutorial Site Team"
+msgstr "Tutorial Site Team"
+
+#: .\tutorial\templates\registration\password_reset_form.html:7
+msgid "Informe seu email"
+msgstr "Introduce tu correo electrónico"
+
+#: .\tutorial\templates\registration\password_reset_form.html:11
+msgid "Enviar"
+msgstr "Enviar"
+
+#: .\tutorial\templates\registration\password_reset_subject.html:3
+msgid "Alterar Senha Tutorial"
+msgstr "Tutorial de cambio de contraseña"
+
+#: .\usuarios\classes.py:68
+msgid "Password reset sent"
+msgstr "Se envió el restablecimiento de contraseña"
+
+#: .\usuarios\classes.py:108
+msgid "Enter new password"
+msgstr "Ingrese nueva clave"
+
+#: .\usuarios\classes.py:119
+msgid "Password reset unsuccessful"
+msgstr "No se pudo restablecer la contraseña"
+
+#: .\usuarios\classes.py:141
+msgid "Password reset complete"
+msgstr "Restablecimiento de contraseña completa"
+
+#: .\usuarios\templates\alterarSenha.html:9
+msgid "Alterar Senha Usuário"
+msgstr "Cambiar contraseña de usuario"
+
+#: .\usuarios\templates\alterarSenha.html:12
+msgid "Antiga Senha"
+msgstr "Contraseña anterior"
+
+#: .\usuarios\templates\alterarSenha.html:13
+msgid "Nova Senha"
+msgstr "Nueva contraseña"
+
+#: .\usuarios\templates\alterarSenha.html:14
+msgid "Confirmar Nova Senha"
+msgstr "Confirmar nueva contraseña"
+
+#: .\usuarios\templates\cadastrarUsuario.html:11
+msgid "Cadastro de Usuário"
+msgstr "Registro de usuario"
+
+#: .\usuarios\templates\cadastrarUsuario.html:13
+#: .\usuarios\templates\editarPerfil.html:15
+#: .\usuarios\templates\editarUsuario.html:15
+#: .\usuarios\templates\listarUsuarios.html:12
+#, fuzzy
+#| msgid "Último Nome"
+msgid "Primeiro Nome"
+msgstr "Ultimo nombre"
+
+#: .\usuarios\templates\cadastrarUsuario.html:14
+#: .\usuarios\templates\editarPerfil.html:16
+#: .\usuarios\templates\editarUsuario.html:16
+#: .\usuarios\templates\listarUsuarios.html:13
+msgid "Último Nome"
+msgstr "Ultimo nombre"
+
+#: .\usuarios\templates\cadastrarUsuario.html:15
+#: .\usuarios\templates\editarPerfil.html:17
+#: .\usuarios\templates\editarUsuario.html:17
+#: .\usuarios\templates\listarUsuarios.html:14
+msgid "Email"
+msgstr "Email"
+
+#: .\usuarios\templates\cadastrarUsuario.html:16
+#: .\usuarios\templates\loginUser.html:13
+msgid "Senha"
+msgstr "Contraseña"
+
+#: .\usuarios\templates\cadastrarUsuario.html:17
+msgid "Confirmação de Senha"
+msgstr "Confirmación de contraseña"
+
+#: .\usuarios\templates\cadastrarUsuario.html:18
+#: .\usuarios\templates\editarUsuario.html:21
+#: .\usuarios\templates\listarUsuarios.html:15
+msgid "Grupo"
+msgstr ""
+
+#: .\usuarios\templates\editarPerfil.html:9
+#: .\usuarios\templates\editarUsuario.html:9
+msgid "Editar Perfil de Usuário"
+msgstr "Editar perfil de usuario"
+
+#: .\usuarios\templates\editarPerfil.html:18
+#: .\usuarios\templates\editarUsuario.html:18
+msgid "Telefone"
+msgstr "Teléfono"
+
+#: .\usuarios\templates\editarPerfil.html:19
+#: .\usuarios\templates\editarUsuario.html:19
+msgid "Endereço Completo"
+msgstr "Direccion Completo"
+
+#: .\usuarios\templates\editarPerfil.html:20
+#: .\usuarios\templates\editarUsuario.html:20
+msgid "Idade"
+msgstr ""
+
+#: .\usuarios\templates\index.html:5
+msgid "Página Inicial"
+msgstr ""
+
+#: .\usuarios\templates\index.html:6
+msgid "Bem vindos a página inicial de Python com Django"
+msgstr "Bienvenido a la página de inicio de Python con Django"
+
+#: .\usuarios\templates\index.html:8
+msgid "Bem vindo"
+msgstr "Bienvenido"
+
+#: .\usuarios\templates\loginUser.html:11
+msgid "Efetuar Login"
+msgstr "Iniciar sesión"
+
+#: .\usuarios\templates\loginUser.html:15
+msgid "Esqueceu a senha?"
+msgstr "Olvido la contraseña?"
+
+#: .\usuarios\views.py:206
+msgid "Usuário deletado com sucesso!"
+msgstr ""

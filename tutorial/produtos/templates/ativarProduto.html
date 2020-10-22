@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+<form method="post" action="{% url 'salvarAtivarProduto' %}">
+  {% csrf_token %}
+      <p><label for="id_nome_produto">{% trans "Nome Produto" %}:</label> <select name="nome_produto" id="id_nome_produto">
+      <option value="">--------</option>
+      {% for produto in produtos %}
+          <option value="{{ produto.id }}">{{ produto.nome_produto }}</option>
+      {% endfor %}
+    </select></p>
+      <p><label for="id_status_produto">{% trans "Status Produto" %}:</label> <select name="status_produto" id="id_status_produto">
+        <option value="">--------</option>
+        <option value="ativo">{% trans "Ativo" %}</option>
+        <option value="inativo">{% trans "Inativo" %}</option>
+      <p><button type="submit"> {% trans "Salvar" %} </button><p>
+</form>
+</div>
+{% endblock %}

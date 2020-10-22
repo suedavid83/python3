@@ -1,0 +1,29 @@
+{% extends 'base2.html' %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Usuários Matérias" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1> {% trans "Usuários Matérias" %} </h1>
+<form method="post" action="{% url 'salvarUsuariosMaterias' %}" enctype="multipart/form-data">
+  {% csrf_token %}
+  <p><label for="usuario"> {% trans "Selecione um usuário" %} </label><select name="usuario" style="font-size:24px;">
+    <option value="" selected>--------</option>
+     {% for usuario in usuarios %}
+        <option value="{{ usuario.user_id }}"> {{ usuario.username }} </option>
+     {% endfor %}
+  </select></p> </br>
+  <p><label>{% trans "Matérias" %}:</label> <ul id="id_materias">
+    {% for materia in materias %}
+        <li><label for="id_materias"><input type="checkbox" name="materias" value="{{ materia.id }}" id="id_materia">
+          {{ materia.nome }}</label>
+        </li>
+    {% endfor %}
+  </ul>
+    <button type="submit"> Salvar </button>
+  </form>
+</div>
+{% endblock %}

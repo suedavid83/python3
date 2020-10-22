@@ -1,0 +1,41 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Lista Perguntas Matéria" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h3 style="color:blue;"> {{ mensagem }} <h3>
+   <table class="table">
+   <thead class="thead-dark">
+     <tr>
+      <th scope="col">{% trans "Data" %}</th>
+      <th scope="col">{% trans "Aluno" %}</th>
+      <th scope="col">{% trans "Matéria" %}</th>
+      <th scope="col">{% trans "Status" %}</th>
+      <th scope="col">{% trans "Total Peso" %}</th>
+      <th scope="col">{% trans "Incluir Nota Aluno" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for resposta in respostas %}
+    <tr>
+      <form method="post" action="{% url 'salvarNotaUsuario' data resposta.usuario resposta.prova_id %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <td>{{ data }}</td>
+        <td>{{ resposta.usuario }}</td>
+        <td> <label for="nome_materia"> <input type="text" name="materia" value="{{ resposta.nome_materia }}" hidden> {{ resposta.nome_materia }} </label></td>
+        <td>{{ resposta.status }}</td>
+        <td>{{ resposta.total_peso }}</td>
+        <td> <label for="nota"> <input type="number" min=0 max=10 name="nota" style="width: 3em;" value="{{ resposta.nota }}"> </label> </td>
+    </tr>
+    {% endfor %}
+    <tr> <td>  <button type="submit"> {% trans "Salvar Notas" %} </button> </td> </tr>
+  </form>
+  </tbody>
+</table>
+</div>
+{% endblock %}

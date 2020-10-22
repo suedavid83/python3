@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+  <h2> {% trans "Fechar Conta Cliente" %} </h2>
+  <h3 style="color:blue"> {{ mensagem }} </h3>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">{% trans "Usuário" %}</th>
+      <th scope="col">{% trans "Qtde. Pedidos" %}</th>
+      <th scope="col">{% trans "Imprimir Pedido Cliente" %}</th>
+      <th scope="col">{% trans "Ação" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for pedido in pedidos %}
+        <tr>
+          <td><a href="{% url 'verDetalhesPedidos' pedido.username %}">{{ pedido.username }} </a></td>
+          <td>{{ pedido.qtde_pedidos }}</td>
+          <td> <a href="{% url 'imprimirPedido' pedido.username %}"> {% trans "Imprimir Pedido" %} </a> </td>
+          <td> <a href="{% url 'fecharContaCliente' pedido.username %}"> {% trans "Fechar Conta" %} </a> </td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

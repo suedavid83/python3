@@ -1,0 +1,37 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+  <h2 style="color:blue;"> {{ mensagem }} </h2>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">{% trans "Nome Matéria" %}</th>
+      <th scope="col">{% trans "Nota Mínima" %}</th>
+      <th scope="col">{% trans "Nota Máxima" %}</th>
+      <th scope="col">{% trans "Imagem" %}</th>
+      <th scope="col">{% trans "Editar" %}</th>
+      <th scope="col">{% trans "Remover" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for materia in materias %}
+          <tr>
+            <td>{{ materia.nome }}</td>
+            <td>{{ materia.nota_minima }}</td>
+            <td>{{ materia.nota_maxima }}</td>
+            {% if materia.img_materia %}
+                  <td><img width="50px" height="50px" src="{{materia.img_materia.url}}"/></td>
+            {% else %}
+              <td></td>
+            {% endif %}
+            <td> <a href="{% url 'editarMateria' materia.id %}"> <img width="30px" height="30px" src="{% static 'images/editar.jpg' %}"/> </a> </td>
+            <td> <a href="{% url 'deleteMateria' materia.id %}"> <img width="20px" height="20px" src="{% static 'images/cancel.png' %}"/> </a> </td>
+          </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

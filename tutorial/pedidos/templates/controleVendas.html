@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+    <form method="POST" action="{% url 'filtrarProdutos' %}">
+         {% csrf_token %}
+        {% trans "Pesquise por produtos"%} <lagel for="nome_produto"> </label> <input type="text" name="nome_produto" size=20/>
+        <button type="submit"> {% trans "Filtrar" %} </button>
+    </form> </br></br>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">{% trans "ID Produto" %}</th>
+      <th scope="col">{% trans "Nome Produto" %}</th>
+      <th scope="col">{% trans "Qtde. Vendida" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for produto in produtos %}
+      <tr>
+        <td>{{ produto.produto_id }}</td>
+        <td>{{ produto.nome_produto }}</td>
+        <td>{{ produto.qtde_vendida }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

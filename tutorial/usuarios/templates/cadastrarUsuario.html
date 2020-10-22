@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <form method="post">
+    {% csrf_token %}
+      <h1> {% trans "Cadastro de Usuário" %} </h1>
+        <p><label for="id_username">{% trans "Usuário" %}:</label> <input type="text" name="username" maxlength="150" autofocus required id="id_username"> <span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span></p>
+        <p><label for="id_first_name">{% trans "Primeiro Nome" %}:</label> <input type="text" name="first_name" maxlength="30" id="id_first_name"></p>
+        <p><label for="id_last_name">{% trans "Último Nome" %}:</label> <input type="text" name="last_name" maxlength="150" id="id_last_name"></p>
+        <p><label for="id_email">{% trans "Email" %}:</label> <input type="email" name="email" maxlength="254" id="id_email"></p>
+        <p><label for="id_password1">{% trans "Senha" %}:</label> <input type="password" name="password1" autocomplete="new-password" required id="id_password1"></p>
+        <p><label for="id_password2">{% trans "Confirmação de Senha" %}:</label> <input type="password" name="password2" autocomplete="new-password" required id="id_password2"> <span class="helptext">Enter the same password as before, for verification.</span></p>
+        <p><label for="id_grupo">{% trans "Grupo" %}:</label> <select name="grupo" required id="id_grupo">
+            <option value="" selected>--------</option>
+            {% for grupo in grupos %}
+              <option value="{{ grupo.id_grupo }}"> {{grupo.nome }} </option>
+            {% endfor %}
+        </select></p>
+            <button type="submit"> {% trans "Cadastrar" %} </button>
+  </form>
+</div>
+{% endblock %}

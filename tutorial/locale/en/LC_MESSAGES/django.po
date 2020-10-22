@@ -1,0 +1,1182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-11 18:26-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\alunos\templates\agendarProva.html:6 .\tutorial\templates\base2.html:106
+msgid "Criar Prova Aluno"
+msgstr "Create Test Student"
+
+#: .\alunos\templates\agendarProva.html:14
+#: .\alunos\templates\editarPergunta.html:12
+#: .\alunos\templates\listarPerguntasProva.html:16
+#: .\alunos\templates\verNotasUsuarioMateria.html:14
+#: .\alunos\templates\viewAlunoProva.html:17
+#: .\alunos\templates\viewDetalhesProva.html:16
+#: .\alunos\templates\viewNotasUsuarios.html:33
+#: .\alunos\templates\viewProvaAlunoMateria.html:16
+#: .\alunos\templates\viewProvasAlunos.html:15
+#: .\alunos\templates\viewProvasHistory.html:36
+msgid "Matéria"
+msgstr "Matter"
+
+#: .\alunos\templates\agendarProva.html:21
+msgid "Criar Prova"
+msgstr "Create Test"
+
+#: .\alunos\templates\alterarMateria.html:11
+msgid "Nome Matéria"
+msgstr "Matter Name"
+
+#: .\alunos\templates\alterarMateria.html:12
+#: .\alunos\templates\materias.html:21
+msgid "Nota Mínima"
+msgstr "Minimun Score"
+
+#: .\alunos\templates\alterarMateria.html:13
+#: .\alunos\templates\materias.html:22
+msgid "Nota Máxima"
+msgstr "Maximum Score"
+
+#: .\alunos\templates\alterarMateria.html:14
+#: .\produtos\templates\produtos.html:27
+msgid "Imagem"
+msgstr "Image"
+
+#: .\alunos\templates\alterarMateria.html:15
+#: .\alunos\templates\listarPerguntasMateria.html:29
+#: .\alunos\templates\listarUsuariosMaterias.html:18
+#: .\produtos\templates\categorias.html:16
+#: .\produtos\templates\produtos.html:28
+#: .\usuarios\templates\listarUsuarios.html:19
+msgid "Editar"
+msgstr "Edit"
+
+#: .\alunos\templates\alterarMateria.html:16
+msgid "Remover"
+msgstr "Delete"
+
+#: .\alunos\templates\criarPergunta.html:6
+msgid "Criar Pergunta"
+msgstr "Create Question"
+
+#: .\alunos\templates\criarPergunta.html:14
+#: .\alunos\templates\editarMateriaUsuario.html:16
+#: .\alunos\templates\listarMateriasProva.html:14
+#: .\alunos\templates\listarPerguntasMateria.html:14
+#: .\alunos\templates\listarUsuariosMaterias.html:17
+#: .\alunos\templates\usuariosMaterias.html:19
+msgid "Matérias"
+msgstr "Matters"
+
+#: .\alunos\templates\criarPergunta.html:25
+msgid "Peso pergunta"
+msgstr "Weight Question "
+
+#: .\alunos\templates\criarPergunta.html:26
+msgid "Informe a pergunta"
+msgstr "Inform your question"
+
+#: .\alunos\templates\criarPergunta.html:28
+msgid "Salvar Pergunta"
+msgstr "Save Question"
+
+#: .\alunos\templates\editarMateria.html:5 .\tutorial\templates\base2.html:87
+msgid "Editar Matéria"
+msgstr "Edit Matter"
+
+#: .\alunos\templates\editarMateria.html:17
+#: .\alunos\templates\materias.html:17
+msgid "Cadastrar Materia"
+msgstr "Register Matter"
+
+#: .\alunos\templates\editarMateria.html:23
+#: .\alunos\templates\materias.html:23
+msgid "Imagem Matéria"
+msgstr "Matter Image"
+
+#: .\alunos\templates\editarMateria.html:28
+#: .\alunos\templates\materias.html:24
+#: .\produtos\templates\cadastrarCategoria.html:26
+#: .\produtos\templates\cadastrarProduto.html:31
+msgid "Escolher arquivo"
+msgstr "Chose File"
+
+#: .\alunos\templates\editarMateria.html:29
+#: .\alunos\templates\materias.html:25
+#: .\produtos\templates\cadastrarCategoria.html:27
+#: .\produtos\templates\cadastrarProduto.html:32
+msgid "Nenhum arquivo selecionado"
+msgstr "No file selected"
+
+#: .\alunos\templates\editarMateriaUsuario.html:5
+#: .\alunos\templates\editarMateriaUsuario.html:10
+#: .\alunos\templates\usuariosMaterias.html:5
+#: .\alunos\templates\usuariosMaterias.html:10
+msgid "Usuários Matérias"
+msgstr "Users Matters"
+
+#: .\alunos\templates\editarMateriaUsuario.html:13
+#: .\alunos\templates\usuariosMaterias.html:13
+msgid "Selecione um usuário"
+msgstr "Select one User"
+
+#: .\alunos\templates\editarPergunta.html:6
+msgid "Editar Pergunta"
+msgstr "Edit Question"
+
+#: .\alunos\templates\editarPergunta.html:15
+#: .\alunos\templates\listarPerguntasMateria.html:26
+msgid "Número Pergunta"
+msgstr "Question Number"
+
+#: .\alunos\templates\editarPergunta.html:16
+#: .\alunos\templates\listarPerguntasMateria.html:28
+#: .\alunos\templates\listarPerguntasProva.html:19
+#: .\alunos\templates\viewDetalhesProva.html:44
+#: .\alunos\templates\viewProvaAlunoMateria.html:19
+msgid "Peso"
+msgstr "Weight"
+
+#: .\alunos\templates\editarPergunta.html:17
+#: .\alunos\templates\listarPerguntasMateria.html:27
+#: .\alunos\templates\listarPerguntasProva.html:18
+#: .\alunos\templates\viewDetalhesProva.html:43
+#: .\alunos\templates\viewProvaAlunoMateria.html:18
+msgid "Pergunta"
+msgstr "Question"
+
+#: .\alunos\templates\editarPergunta.html:18
+#: .\alunos\templates\listarPerguntasProva.html:22
+#: .\produtos\templates\ativarProduto.html:18
+msgid "Salvar"
+msgstr "Salvar"
+
+#: .\alunos\templates\homeMaterias.html:6
+msgid "Home Materias"
+msgstr "Home Matters"
+
+#: .\alunos\templates\inicioProvaAluno.html:6
+msgid "Início Prova Aluno"
+msgstr "Start Test Student"
+
+#: .\alunos\templates\inicioProvaAluno.html:15
+#: .\alunos\templates\listarPerguntasProva.html:15
+#: .\alunos\templates\viewAlunoProva.html:16
+#: .\alunos\templates\viewDetalhesProva.html:15
+#: .\alunos\templates\viewProvasAlunos.html:16
+#: .\alunos\templates\viewProvasHistory.html:35
+msgid "Aluno"
+msgstr "Student"
+
+#: .\alunos\templates\inicioProvaAluno.html:16
+msgid "Escolha a matéria que deseja realizar a prova"
+msgstr "Choose the matter you wish to make the test"
+
+#: .\alunos\templates\inicioProvaAluno.html:18
+#: .\alunos\templates\listarMateriasProva.html:16
+#: .\alunos\templates\listarPerguntasMateria.html:16 .\alunos\views.py:435
+msgid "Selecione uma matéria"
+msgstr "Select one matter"
+
+#: .\alunos\templates\inicioProvaAluno.html:23
+msgid "Ver Prova"
+msgstr "View Test"
+
+#: .\alunos\templates\listarMateriasProva.html:6
+msgid "Listar Alunos Matéria"
+msgstr "List Students Matters"
+
+#: .\alunos\templates\listarMateriasProva.html:21
+msgid "Listar Alunos"
+msgstr "List Students"
+
+#: .\alunos\templates\listarPerguntasMateria.html:6
+#: .\alunos\templates\viewAlunoProva.html:6
+#: .\alunos\templates\viewProvasAlunos.html:6
+msgid "Lista Perguntas Matéria"
+msgstr "List Questions Matter"
+
+#: .\alunos\templates\listarPerguntasMateria.html:21
+msgid "Listar Perguntas"
+msgstr "List Questions"
+
+#: .\alunos\templates\listarPerguntasMateria.html:30
+#: .\alunos\templates\listarUsuariosMaterias.html:19
+#: .\alunos\templates\viewProvasAlunos.html:21
+#: .\produtos\templates\categorias.html:17
+#: .\produtos\templates\produtos.html:29
+#: .\usuarios\templates\listarUsuarios.html:20
+msgid "Excluir"
+msgstr "Delete"
+
+#: .\alunos\templates\listarPerguntasProva.html:6
+#: .\alunos\templates\viewProvaAlunoMateria.html:6
+msgid "Listar Perguntas Prova"
+msgstr "List Question Test"
+
+#: .\alunos\templates\listarPerguntasProva.html:14
+#: .\alunos\templates\verNotasUsuarioMateria.html:13
+#: .\alunos\templates\viewAlunoProva.html:15
+#: .\alunos\templates\viewDetalhesProva.html:41
+#: .\alunos\templates\viewNotasUsuarios.html:31
+#: .\alunos\templates\viewProvaAlunoMateria.html:14
+msgid "Data"
+msgstr "Date"
+
+#: .\alunos\templates\listarPerguntasProva.html:20
+#: .\alunos\templates\viewDetalhesProva.html:45
+#: .\alunos\templates\viewProvaAlunoMateria.html:20
+msgid "Resposta"
+msgstr "Answer"
+
+#: .\alunos\templates\listarPerguntasProva.html:23
+msgid ""
+"Antes de concluir a prova certifique-se de salvá-la antes, caso tenha feito "
+"alguma alteração!"
+msgstr ""
+"Before you complete the test, guarantee you save them before, in case it has "
+"any change"
+
+#: .\alunos\templates\listarPerguntasProva.html:24
+msgid "Concluir Prova"
+msgstr "Complete Test"
+
+#: .\alunos\templates\listarUsuariosMaterias.html:6
+#: .\alunos\templates\listarUsuariosMaterias.html:11
+msgid "Listar Notas Usuários"
+msgstr "List User Scores"
+
+#: .\alunos\templates\listarUsuariosMaterias.html:16
+#: .\alunos\templates\verNotasUsuarioMateria.html:9
+#: .\alunos\templates\viewNotasUsuarios.html:32
+#: .\pedidos\templates\cozinha.html:18 .\pedidos\templates\cozinha.html:54
+#: .\pedidos\templates\detalhesConta.html:11
+#: .\pedidos\templates\fecharConta.html:12 .\pedidos\templates\garcom.html:18
+#: .\pedidos\templates\garcom.html:54 .\pedidos\templates\meusPedidos.html:12
+#: .\pedidos\templates\meusPedidos.html:44
+#: .\pedidos\templates\meusPedidos.html:74
+#: .\pedidos\templates\pedidosHistory.html:20
+#: .\usuarios\templates\cadastrarUsuario.html:12
+#: .\usuarios\templates\editarPerfil.html:12
+#: .\usuarios\templates\editarUsuario.html:12
+#: .\usuarios\templates\listarUsuarios.html:14
+#: .\usuarios\templates\loginUser.html:12
+msgid "Usuário"
+msgstr "User"
+
+#: .\alunos\templates\materias.html:5
+msgid "Cadastro de Matérias"
+msgstr "Register Matter"
+
+#: .\alunos\templates\materias.html:20
+msgid "Nome"
+msgstr "Name"
+
+#: .\alunos\templates\verNotasUsuarioMateria.html:15
+#: .\alunos\templates\viewDetalhesProva.html:19
+#: .\alunos\templates\viewNotasUsuarios.html:34
+#: .\alunos\templates\viewProvasAlunos.html:19
+#: .\alunos\templates\viewProvasHistory.html:39
+msgid "Nota"
+msgstr "Score"
+
+#: .\alunos\templates\verNotasUsuarioMateria.html:16
+#: .\alunos\templates\viewDetalhesProva.html:20
+#: .\alunos\templates\viewDetalhesProva.html:46
+#: .\alunos\templates\viewNotasUsuarios.html:35
+#: .\alunos\templates\viewProvaAlunoMateria.html:21
+#: .\alunos\templates\viewProvasHistory.html:40
+msgid "Resultado"
+msgstr "Result"
+
+#: .\alunos\templates\verNotasUsuarioMateria.html:26
+#: .\alunos\templates\viewDetalhesProva.html:32
+#: .\alunos\templates\viewNotasUsuarios.html:46
+#: .\alunos\templates\viewProvasHistory.html:52
+msgid "Falhou"
+msgstr "Failed"
+
+#: .\alunos\templates\verNotasUsuarioMateria.html:28
+#: .\alunos\templates\viewDetalhesProva.html:34
+#: .\alunos\templates\viewNotasUsuarios.html:48
+#: .\alunos\templates\viewProvasHistory.html:54
+msgid "Passou"
+msgstr "Passed"
+
+#: .\alunos\templates\viewAlunoProva.html:18
+#: .\alunos\templates\viewDetalhesProva.html:18
+#: .\alunos\templates\viewProvasAlunos.html:18
+#: .\alunos\templates\viewProvasHistory.html:38
+#: .\pedidos\templates\imprimirPedidosCliente.html:13
+#: .\produtos\templates\produtos.html:25
+msgid "Status"
+msgstr "Status"
+
+#: .\alunos\templates\viewAlunoProva.html:19
+msgid "Total Peso"
+msgstr "Total Weight"
+
+#: .\alunos\templates\viewAlunoProva.html:20
+msgid "Incluir Nota Aluno"
+msgstr "Insert User Score"
+
+#: .\alunos\templates\viewAlunoProva.html:36
+msgid "Salvar Notas"
+msgstr "Salvar Scores"
+
+#: .\alunos\templates\viewDetalhesProva.html:6
+#: .\alunos\templates\viewProvasHistory.html:6
+#: .\tutorial\templates\base2.html:109
+msgid "View Provas History"
+msgstr "View Test History"
+
+#: .\alunos\templates\viewDetalhesProva.html:17
+#: .\alunos\templates\viewProvasAlunos.html:17
+#: .\alunos\templates\viewProvasHistory.html:37
+msgid "Qtde. Perguntas"
+msgstr "Qty. Questions"
+
+#: .\alunos\templates\viewDetalhesProva.html:42
+msgid "Nr. Pergunta"
+msgstr "Nr. Question"
+
+#: .\alunos\templates\viewNotasUsuarios.html:11
+#: .\pedidos\templates\pedidosHistory.html:10
+msgid "Selecione uma Data"
+msgstr "Select one Date"
+
+#: .\alunos\templates\viewNotasUsuarios.html:16
+#: .\alunos\templates\viewNotasUsuarios.html:26
+#: .\alunos\templates\viewProvasHistory.html:20
+#: .\alunos\templates\viewProvasHistory.html:30
+#: .\pedidos\templates\controleVendas.html:10
+#: .\pedidos\templates\pedidosHistory.html:15
+#: .\produtos\templates\produtos.html:16
+msgid "Filtrar"
+msgstr "Filter"
+
+#: .\alunos\templates\viewNotasUsuarios.html:21
+#: .\alunos\templates\viewProvasHistory.html:25
+msgid "Selecione um Usuário"
+msgstr "Select one User"
+
+#: .\alunos\templates\viewProvaAlunoMateria.html:15
+msgid "Alunos"
+msgstr "Students"
+
+#: .\alunos\templates\viewProvaAlunoMateria.html:23
+#: .\alunos\templates\viewProvaAlunoMateria.html:27
+#: .\alunos\templates\viewProvaAlunoMateria.html:31
+msgid "Correto"
+msgstr "Correct"
+
+#: .\alunos\templates\viewProvaAlunoMateria.html:24
+#: .\alunos\templates\viewProvaAlunoMateria.html:28
+#: .\alunos\templates\viewProvaAlunoMateria.html:32
+msgid "Incorreto"
+msgstr "Incorrect"
+
+#: .\alunos\templates\viewProvaAlunoMateria.html:35
+msgid "Salvar Correções"
+msgstr "Save Corrections"
+
+#: .\alunos\templates\viewProvasAlunos.html:20
+msgid "Visualizar"
+msgstr "View"
+
+#: .\alunos\templates\viewProvasAlunos.html:22
+#: .\alunos\templates\viewProvasAlunos.html:40
+msgid "Arquivar"
+msgstr "Archive"
+
+#: .\alunos\templates\viewProvasHistory.html:15
+msgid "Selecione uma Matéria"
+msgstr "Select one Matter"
+
+#: .\alunos\views.py:47
+msgid "Matéria cadastrada com sucesso!"
+msgstr "Matter registered successfully!"
+
+#: .\alunos\views.py:105
+msgid ""
+"Não é possível excluir matéria pois a mesma está associada a um ou mais "
+"usuários"
+msgstr ""
+"It's not possible to delete matter because it's associated to one or more "
+"students"
+
+#: .\alunos\views.py:114
+msgid "Matéria deletada com sucesso!"
+msgstr "Matter deleted successfully!"
+
+#: .\alunos\views.py:136
+msgid "Usuário ja cadastrado!"
+msgstr "User already registered"
+
+#: .\alunos\views.py:149
+msgid "Usuário cadastrado com sucesso!"
+msgstr "User registered successfully!"
+
+#: .\alunos\views.py:166
+msgid ""
+"Nao é possível excluir usuário pois o mesmo possui notas associadas a ele!"
+msgstr ""
+"It's not possible to delete user because it has scores asssociated to it!"
+
+#: .\alunos\views.py:171 .\usuarios\views.py:222 .\usuarios\views.py:231
+#: .\usuarios\views.py:238
+msgid "Usuário deletado com sucesso!"
+msgstr "User deleted successfully!"
+
+#: .\alunos\views.py:255
+msgid "Nota incluída com sucesso!"
+msgstr "Score inserted successfully!"
+
+#: .\alunos\views.py:327 .\alunos\views.py:384
+msgid "Este peso não pode ser utilizado pois ultrapassa o limite de 10"
+msgstr "This weight can't be used because it surpasses the limit of 10"
+
+#: .\alunos\views.py:399
+msgid "Pergunta alterada com sucesso!"
+msgstr "Question updated successfully!"
+
+#: .\alunos\views.py:411
+msgid "Pergunta deletada com sucesso!"
+msgstr "Question deleted successfully!"
+
+#: .\alunos\views.py:413
+msgid "Pergunta não pode ser deletada pois a mesma está associada a uma prova!"
+msgstr "Question can't be deleted because it's associated to one Test"
+
+#: .\alunos\views.py:461
+msgid "Não existem perguntas criadas para essa matéria"
+msgstr "There aren't questions created to this matter"
+
+#: .\alunos\views.py:470
+msgid "Já existe prova criada para esse aluno nessa matéria"
+msgstr "There is already a Test created to this student for this matter"
+
+#: .\alunos\views.py:479
+msgid ""
+"O peso total das perguntas dessa matéria é menor do que 10. Não é possível "
+"criar prova!"
+msgstr "The total weight of the questions for this matter is lower than 10. It's not possible "
+"to create the Test!"
+
+#: .\alunos\views.py:511
+msgid "Prova excluída com sucesso!"
+msgstr "Test deleted successfully!"
+
+#: .\alunos\views.py:513
+msgid "Não é possível excluir prova pois a mesma já foi iniciada"
+msgstr "It's not possible to delete test because it was already started"
+
+#: .\alunos\views.py:627
+msgid "Respostas devem ser marcadas como correta ou incorreta"
+msgstr "Questions must be marked as correct or incorrect"
+
+#: .\alunos\views.py:660
+msgid "Prova arquivada com sucesso!"
+msgstr "Test archived successfully!"
+
+#: .\pedidos\templates\controleVendas.html:9
+msgid "Pesquise por produtos"
+msgstr "Search for Products"
+
+#: .\pedidos\templates\controleVendas.html:15
+msgid "ID Produto"
+msgstr "ID Product"
+
+#: .\pedidos\templates\controleVendas.html:16
+#: .\pedidos\templates\cozinha.html:12 .\pedidos\templates\cozinha.html:48
+#: .\pedidos\templates\garcom.html:12 .\pedidos\templates\garcom.html:48
+#: .\pedidos\templates\meusPedidos.html:14
+#: .\pedidos\templates\meusPedidos.html:46
+#: .\pedidos\templates\meusPedidos.html:76
+#: .\produtos\templates\ativarProduto.html:8
+#: .\produtos\templates\cadastrarProduto.html:23
+#: .\produtos\templates\editarProduto.html:11
+#: .\produtos\templates\produtos.html:22
+msgid "Nome Produto"
+msgstr "Product Name"
+
+#: .\pedidos\templates\controleVendas.html:17
+msgid "Qtde. Vendida"
+msgstr "Sold Qty."
+
+#: .\pedidos\templates\cozinha.html:7 .\pedidos\templates\meusPedidos.html:8
+msgid "Pedidos Pendentes"
+msgstr "Pending Orders"
+
+#: .\pedidos\templates\cozinha.html:11 .\pedidos\templates\cozinha.html:47
+#: .\pedidos\templates\garcom.html:11 .\pedidos\templates\garcom.html:47
+#: .\pedidos\templates\meusPedidos.html:13
+#: .\pedidos\templates\meusPedidos.html:45
+#: .\pedidos\templates\meusPedidos.html:75
+msgid "Número Pedido"
+msgstr "Order Number"
+
+#: .\pedidos\templates\cozinha.html:13 .\pedidos\templates\cozinha.html:49
+#: .\pedidos\templates\garcom.html:13 .\pedidos\templates\garcom.html:49
+#: .\pedidos\templates\imprimirPedidosCliente.html:13
+#: .\pedidos\templates\meusPedidos.html:15
+#: .\pedidos\templates\meusPedidos.html:47
+#: .\pedidos\templates\meusPedidos.html:77
+#: .\pedidos\templates\pedidosHistory.html:24
+msgid "Preço Unitário"
+msgstr "Unit Price"
+
+#: .\pedidos\templates\cozinha.html:14 .\pedidos\templates\cozinha.html:50
+#: .\pedidos\templates\garcom.html:14 .\pedidos\templates\garcom.html:50
+#: .\pedidos\templates\imprimirPedidosCliente.html:13
+#: .\pedidos\templates\meusPedidos.html:16
+#: .\pedidos\templates\meusPedidos.html:48
+#: .\pedidos\templates\meusPedidos.html:78
+#: .\pedidos\templates\pedidosHistory.html:23
+#: .\produtos\templates\detalhesProduto.html:17
+msgid "Quantidade"
+msgstr "Quantity"
+
+#: .\pedidos\templates\cozinha.html:15 .\pedidos\templates\cozinha.html:51
+#: .\pedidos\templates\garcom.html:15 .\pedidos\templates\garcom.html:51
+#: .\pedidos\templates\meusPedidos.html:17
+#: .\pedidos\templates\meusPedidos.html:49
+#: .\pedidos\templates\meusPedidos.html:79
+#: .\pedidos\templates\pedidosHistory.html:25
+msgid "Valor Total"
+msgstr "Total Value"
+
+#: .\pedidos\templates\cozinha.html:16 .\pedidos\templates\cozinha.html:52
+#: .\pedidos\templates\garcom.html:16 .\pedidos\templates\garcom.html:52
+#: .\pedidos\templates\meusPedidos.html:18
+#: .\pedidos\templates\meusPedidos.html:50
+#: .\pedidos\templates\meusPedidos.html:80
+#: .\pedidos\templates\pedidosHistory.html:26
+msgid "Status Pedido"
+msgstr "Order Status"
+
+#: .\pedidos\templates\cozinha.html:17 .\pedidos\templates\meusPedidos.html:19
+msgid "Dt_Hr_Inserção"
+msgstr "Dt_Hr_Insert"
+
+#: .\pedidos\templates\cozinha.html:19
+#: .\pedidos\templates\detalhesConta.html:14
+#: .\pedidos\templates\fecharConta.html:15 .\pedidos\templates\garcom.html:19
+#: .\pedidos\templates\meusPedidos.html:20
+msgid "Ação"
+msgstr "Action"
+
+#: .\pedidos\templates\cozinha.html:35
+msgid "Pronto"
+msgstr "Ready"
+
+#: .\pedidos\templates\cozinha.html:43 .\pedidos\templates\garcom.html:7
+#: .\pedidos\templates\meusPedidos.html:40
+msgid "Pedidos Prontos"
+msgstr "Ready Products"
+
+#: .\pedidos\templates\cozinha.html:53 .\pedidos\templates\garcom.html:17
+#: .\pedidos\templates\meusPedidos.html:51
+#: .\pedidos\templates\pedidosHistory.html:28
+msgid "Dt_Hr_Pronto"
+msgstr "Dt_Hr_Ready"
+
+#: .\pedidos\templates\detalhesConta.html:7
+msgid "Detalhes Conta Cliente"
+msgstr "Customer Bill Details"
+
+#: .\pedidos\templates\detalhesConta.html:12
+#: .\pedidos\templates\fecharConta.html:13
+msgid "Qtde. Pedidos"
+msgstr "Qty. Orders"
+
+#: .\pedidos\templates\detalhesConta.html:13
+#: .\pedidos\templates\fecharConta.html:14
+msgid "Imprimir Pedido Cliente"
+msgstr "Print Customer Order"
+
+#: .\pedidos\templates\detalhesConta.html:22
+#: .\pedidos\templates\fecharConta.html:23
+msgid "Imprimir Pedido"
+msgstr "Print Order"
+
+#: .\pedidos\templates\detalhesConta.html:23
+#: .\pedidos\templates\fecharConta.html:24
+msgid "Fechar Conta"
+msgstr "Close Bill"
+
+#: .\pedidos\templates\fecharConta.html:7 .\tutorial\templates\base.html:66
+msgid "Fechar Conta Cliente"
+msgstr "Close Customer Bill"
+
+#: .\pedidos\templates\garcom.html:35
+msgid "Entregue"
+msgstr "Delivered"
+
+#: .\pedidos\templates\garcom.html:43 .\pedidos\templates\meusPedidos.html:70
+msgid "Pedidos Entregues"
+msgstr "Delivered Orders"
+
+#: .\pedidos\templates\garcom.html:53 .\pedidos\templates\meusPedidos.html:81
+#: .\pedidos\templates\pedidosHistory.html:29
+msgid "Dt_Hr_Entregue"
+msgstr "Dt_Hr_Delivered"
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:5
+msgid "Imprimir Pedidos Cliente"
+msgstr "Print Order Customer"
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:12
+msgid "Pedidos Cliente"
+msgstr "Customer Orders"
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:13
+#: .\pedidos\templates\pedidosHistory.html:21
+msgid "Nr. Pedido"
+msgstr "Nr. Order"
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:13
+#: .\pedidos\templates\pedidosHistory.html:22
+msgid "Produto"
+msgstr "Product"
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:13
+msgid "Total"
+msgstr "Total"
+
+#: .\pedidos\templates\imprimirPedidosCliente.html:26
+msgid "Total: R$"
+msgstr "Total: U$"
+
+#: .\pedidos\templates\pedidosHistory.html:27
+msgid "Dt_Hr_Pedido"
+msgstr "Dt_Hr_Order"
+
+#: .\pedidos\views.py:103
+msgid "Existem Pedidos Pendentes, não é possível fechar a conta"
+msgstr "There are Pending Orders, it's not possible to close the bill"
+
+#: .\pedidos\views.py:109
+msgid "Conta Fechada com sucesso!"
+msgstr "Bill closed successfully!"
+
+#: .\pedidos\views.py:119
+msgid "Pedido excluído com sucesso!"
+msgstr "Order deleted successfully!"
+
+#: .\principal\templates\index.html:8
+msgid "Página Inicial"
+msgstr "Home Page"
+
+#: .\principal\templates\index.html:9
+msgid "Bem vindos a página inicial de Python 3 com Django"
+msgstr "Welcome to the Python 3 with Django Home Page"
+
+#: .\principal\templates\index.html:11
+msgid "Bem vindo"
+msgstr "Welcome"
+
+#: .\principal\templates\index.html:12
+#: .\usuarios\templates\cadastrarUsuario.html:18
+#: .\usuarios\templates\editarUsuario.html:21
+#: .\usuarios\templates\listarUsuarios.html:18
+msgid "Grupo"
+msgstr "Group"
+
+#: .\produtos\templates\ativarProduto.html:14
+#: .\produtos\templates\cadastrarProduto.html:26
+#: .\produtos\templates\editarProduto.html:14
+msgid "Status Produto"
+msgstr "Product Status"
+
+#: .\produtos\templates\ativarProduto.html:16
+#: .\produtos\templates\cadastrarProduto.html:27
+#: .\produtos\templates\editarProduto.html:15
+msgid "Ativo"
+msgstr "Active"
+
+#: .\produtos\templates\ativarProduto.html:17
+#: .\produtos\templates\cadastrarProduto.html:28
+#: .\produtos\templates\editarProduto.html:16
+msgid "Inativo"
+msgstr "Disable"
+
+#: .\produtos\templates\cadastrarCategoria.html:16
+msgid "Cadastro de Categoria"
+msgstr "Register Category"
+
+#: .\produtos\templates\cadastrarCategoria.html:19
+#: .\produtos\templates\categorias.html:11
+#: .\produtos\templates\editarCategoria.html:10
+msgid "Nome Categoria"
+msgstr "Category Name"
+
+#: .\produtos\templates\cadastrarCategoria.html:20
+#: .\produtos\templates\categorias.html:12
+#: .\produtos\templates\editarCategoria.html:11
+msgid "Descrição Categoria"
+msgstr "Category Description"
+
+#: .\produtos\templates\cadastrarCategoria.html:21
+#: .\produtos\templates\categorias.html:13
+#: .\produtos\templates\editarCategoria.html:12
+msgid "Status Categoria"
+msgstr "Category Status"
+
+#: .\produtos\templates\cadastrarCategoria.html:22
+#: .\produtos\templates\editarCategoria.html:13
+msgid "Ativa"
+msgstr "Active"
+
+#: .\produtos\templates\cadastrarCategoria.html:23
+#: .\produtos\templates\editarCategoria.html:14
+msgid "Inativa"
+msgstr "Disable"
+
+#: .\produtos\templates\cadastrarCategoria.html:25
+#: .\produtos\templates\categorias.html:15
+#: .\produtos\templates\editarCategoria.html:16
+msgid "Imagem Categoria"
+msgstr "Category Image"
+
+#: .\produtos\templates\cadastrarCategoria.html:29
+#: .\produtos\templates\cadastrarProduto.html:34
+#: .\produtos\templates\categorias.html:14
+#: .\produtos\templates\editarCategoria.html:20
+#: .\produtos\templates\editarProduto.html:18
+#: .\produtos\templates\produtos.html:26
+msgid "Idioma"
+msgstr "Language"
+
+#: .\produtos\templates\cadastrarCategoria.html:34
+#: .\produtos\templates\cadastrarProduto.html:45
+#: .\usuarios\templates\cadastrarUsuario.html:24
+msgid "Cadastrar"
+msgstr "Register"
+
+#: .\produtos\templates\cadastrarProduto.html:6
+#: .\produtos\templates\cadastrarProduto.html:19
+msgid "Cadastro de Produtos"
+msgstr "Register Product"
+
+#: .\produtos\templates\cadastrarProduto.html:22
+#: .\produtos\templates\editarProduto.html:10
+#: .\produtos\templates\produtos.html:21
+msgid "Código Produto"
+msgstr "Product Code"
+
+#: .\produtos\templates\cadastrarProduto.html:24
+#: .\produtos\templates\editarProduto.html:12
+#: .\produtos\templates\produtos.html:23
+msgid "Descrição Produto"
+msgstr "Product Description"
+
+#: .\produtos\templates\cadastrarProduto.html:25
+#: .\produtos\templates\editarProduto.html:13
+#: .\produtos\templates\produtos.html:24
+msgid "Preço Produto"
+msgstr "Product Price"
+
+#: .\produtos\templates\cadastrarProduto.html:30
+#: .\produtos\templates\editarProduto.html:32
+msgid "Imagem Produto"
+msgstr "Product Image"
+
+#: .\produtos\templates\cadastrarProduto.html:39
+#: .\produtos\templates\editarProduto.html:25
+msgid "Categoria"
+msgstr "Category"
+
+#: .\produtos\templates\detalhesProduto.html:7
+#: .\produtos\templates\listProdutos.html:7
+msgid "Voltar"
+msgstr "Back"
+
+#: .\produtos\templates\detalhesProduto.html:14
+msgid "Descrição"
+msgstr "Description"
+
+#: .\produtos\templates\detalhesProduto.html:15
+msgid "Preço"
+msgstr "Price"
+
+#: .\produtos\templates\detalhesProduto.html:18
+msgid "Comprar"
+msgstr "Buy"
+
+#: .\produtos\templates\editarCategoria.html:7
+msgid "Editar Categoria"
+msgstr "Edit Category"
+
+#: .\produtos\templates\editarCategoria.html:26
+#: .\usuarios\templates\editarPerfil.html:21
+#: .\usuarios\templates\editarUsuario.html:27
+msgid "Salvar Alterações"
+msgstr "Save Changes"
+
+#: .\produtos\templates\editarProduto.html:7
+msgid "Alteração de Produto"
+msgstr "Update Product"
+
+#: .\produtos\templates\editarProduto.html:36
+msgid "Atualizar Cadastro"
+msgstr "Update"
+
+#: .\produtos\templates\produtos.html:7
+msgid "Ativar Produto"
+msgstr "Active Product"
+
+#: .\produtos\templates\produtos.html:11
+msgid "Selecione uma Categoria"
+msgstr "Select one Category"
+
+#: .\produtos\views.py:206
+msgid "Categoria excluída com sucesso!"
+msgstr "Category deleted successfully!"
+
+#: .\produtos\views.py:208
+msgid "Existem produtos associados a essa Categoria. Não é possível excluí-la"
+msgstr ""
+"There are products associated to this Category. It's not possible do delete "
+"it"
+
+#: .\tutorial\templates\base.html:41
+msgid "Home Restaurante"
+msgstr "Home Restaurant"
+
+#: .\tutorial\templates\base.html:47
+msgid "Home Escola"
+msgstr "Home School"
+
+#: .\tutorial\templates\base.html:52 .\tutorial\templates\base2.html:53
+#: .\tutorial\templates\registration\password_reset_confirm.html:11
+#: .\usuarios\templates\alterarSenha.html:15
+msgid "Alterar Senha"
+msgstr "Change Password"
+
+#: .\tutorial\templates\base.html:55 .\tutorial\templates\base2.html:56
+msgid "Editar Perfil"
+msgstr "Edit Profile"
+
+#: .\tutorial\templates\base.html:59 .\tutorial\templates\base2.html:60
+msgid "Cadastrar Usuário"
+msgstr "Register User"
+
+#: .\tutorial\templates\base.html:62 .\tutorial\templates\base2.html:63
+msgid "Alterar Usuário"
+msgstr "Change User"
+
+#: .\tutorial\templates\base.html:72
+msgid "Meus Pedidos"
+msgstr "My Orders"
+
+#: .\tutorial\templates\base.html:93
+msgid "Menu Principal"
+msgstr "Principal Menu"
+
+#: .\tutorial\templates\base.html:95
+msgid "Menu"
+msgstr "Menu"
+
+#: .\tutorial\templates\base.html:97 .\tutorial\templates\base.html:106
+#: .\tutorial\templates\base.html:110
+msgid "Categorias"
+msgstr "Categories"
+
+#: .\tutorial\templates\base.html:98 .\tutorial\templates\base.html:107
+#: .\tutorial\templates\base.html:111
+msgid "Produtos"
+msgstr "Products"
+
+#: .\tutorial\templates\base.html:99
+msgid "Cadastrar Categoria"
+msgstr "Register Category"
+
+#: .\tutorial\templates\base.html:100
+msgid "Cadastrar Produto"
+msgstr "Register Product"
+
+#: .\tutorial\templates\base.html:101 .\tutorial\templates\base.html:112
+msgid "Cozinha"
+msgstr "Kitchen"
+
+#: .\tutorial\templates\base.html:102 .\tutorial\templates\base.html:108
+msgid "Garçom"
+msgstr "Waiter"
+
+#: .\tutorial\templates\base.html:103
+msgid "Histórico de Pedidos"
+msgstr "Orders History"
+
+#: .\tutorial\templates\base.html:104
+msgid "Controle de Vendas"
+msgstr "Control of Sales"
+
+#: .\tutorial\templates\base2.html:83
+msgid "Menu Matérias"
+msgstr "Matters"
+
+#: .\tutorial\templates\base2.html:86
+msgid "Cadastrar Matéria"
+msgstr "Register Matter"
+
+#: .\tutorial\templates\base2.html:88
+msgid "Cadastrar Aluno Matérias"
+msgstr "Register Matter Student"
+
+#: .\tutorial\templates\base2.html:91
+msgid "Listar Aluno Matérias"
+msgstr "List Students Matters"
+
+#: .\tutorial\templates\base2.html:96
+msgid "Menu Alunos"
+msgstr "Students Menu"
+
+#: .\tutorial\templates\base2.html:99
+msgid "Listar Perguntas Matéria"
+msgstr "List Questions Matters"
+
+#: .\tutorial\templates\base2.html:101
+msgid "Fazer Prova"
+msgstr "Make Test"
+
+#: .\tutorial\templates\base2.html:105
+msgid "Criar Perguntas"
+msgstr "Create Questions"
+
+#: .\tutorial\templates\base2.html:107
+msgid "Ver Notas Alunos"
+msgstr "View Students Score"
+
+#: .\tutorial\templates\base2.html:108
+msgid "View Provas Alunos"
+msgstr "View Students Tests"
+
+#: .\tutorial\templates\registration\password_reset_complete.html:7
+msgid "Sua senha foi alterada. Você pode fazer o "
+msgstr "Your password was changed. You can make the "
+
+#: .\tutorial\templates\registration\password_reset_complete.html:7
+msgid "agora"
+msgstr "now"
+
+#: .\tutorial\templates\registration\password_reset_confirm.html:7
+msgid "Altere sua senha"
+msgstr "Change your password"
+
+#: .\tutorial\templates\registration\password_reset_confirm.html:16
+msgid ""
+"O link de resetar senha está incorreto, possivelmente porque ele já foi "
+"utilizado."
+msgstr ""
+"The link to reset your password is incorrect, possibly because it's was "
+"already used."
+
+#: .\tutorial\templates\registration\password_reset_confirm.html:17
+msgid "Por favor, solicite um novo link para resetar sua senha."
+msgstr "Please, request a new link to reset your password"
+
+#: .\tutorial\templates\registration\password_reset_done.html:7
+msgid ""
+"Nós enviamos um email com as instruções para resetar sua senha, caso sua "
+"conta exista com o email informado."
+msgstr ""
+"We sent an email with the instructions to reset your password, in case your "
+"account exists with the email informed."
+
+#: .\tutorial\templates\registration\password_reset_done.html:8
+msgid "Você deve recebê-lo rapidamente."
+msgstr "You should receive it soon."
+
+#: .\tutorial\templates\registration\password_reset_done.html:11
+msgid ""
+"Caso você não receba um email, por favor verifique se informou o email "
+"correto que você tem registrado conosco,"
+msgstr ""
+"In case you don't receive an email, please check if you have informed the "
+"email correct that you have registered with us,"
+
+#: .\tutorial\templates\registration\password_reset_done.html:12
+msgid "e verifique sua pasta spam."
+msgstr "and check your spam folder."
+
+#: .\tutorial\templates\registration\password_reset_email.html:4
+msgid "Para iniciar o processo de resetar senha seu "
+msgstr "To start the reset password process "
+
+#: .\tutorial\templates\registration\password_reset_email.html:5
+msgid "clique no link abaixo:"
+msgstr "click on link below:"
+
+#: .\tutorial\templates\registration\password_reset_email.html:9
+msgid "Se o link não funcionar, por favor copie e cole a URL em um browser."
+msgstr ""
+"If the link doesn't work, please copy and paste the URL on your browser."
+
+#: .\tutorial\templates\registration\password_reset_email.html:11
+msgid "Sinceramente,"
+msgstr "Sincerely,"
+
+#: .\tutorial\templates\registration\password_reset_email.html:12
+msgid "Tutorial Site Team"
+msgstr "Tutorial Site Team"
+
+#: .\tutorial\templates\registration\password_reset_form.html:7
+msgid "Informe seu email"
+msgstr "Inform your email"
+
+#: .\tutorial\templates\registration\password_reset_form.html:11
+msgid "Enviar"
+msgstr "Send"
+
+#: .\tutorial\templates\registration\password_reset_subject.html:3
+msgid "Alterar Senha Tutorial"
+msgstr "Change Tutorial Password"
+
+#: .\usuarios\classes.py:68
+msgid "Password reset sent"
+msgstr "Password reset sent"
+
+#: .\usuarios\classes.py:108
+msgid "Enter new password"
+msgstr "Enter new password"
+
+#: .\usuarios\classes.py:119
+msgid "Password reset unsuccessful"
+msgstr "Password reset unsuccessful"
+
+#: .\usuarios\classes.py:141
+msgid "Password reset complete"
+msgstr "Password reset complete"
+
+#: .\usuarios\templates\alterarSenha.html:9
+msgid "Alterar Senha Usuário"
+msgstr "Change User Password"
+
+#: .\usuarios\templates\alterarSenha.html:12
+msgid "Antiga Senha"
+msgstr "Old Password"
+
+#: .\usuarios\templates\alterarSenha.html:13
+msgid "Nova Senha"
+msgstr "New Password"
+
+#: .\usuarios\templates\alterarSenha.html:14
+msgid "Confirmar Nova Senha"
+msgstr "Confirmation new password"
+
+#: .\usuarios\templates\cadastrarUsuario.html:11
+msgid "Cadastro de Usuário"
+msgstr "Register User"
+
+#: .\usuarios\templates\cadastrarUsuario.html:13
+#: .\usuarios\templates\editarPerfil.html:15
+#: .\usuarios\templates\editarUsuario.html:15
+#: .\usuarios\templates\listarUsuarios.html:15
+msgid "Primeiro Nome"
+msgstr "First Name"
+
+#: .\usuarios\templates\cadastrarUsuario.html:14
+#: .\usuarios\templates\editarPerfil.html:16
+#: .\usuarios\templates\editarUsuario.html:16
+#: .\usuarios\templates\listarUsuarios.html:16
+msgid "Último Nome"
+msgstr "Last Name"
+
+#: .\usuarios\templates\cadastrarUsuario.html:15
+#: .\usuarios\templates\editarPerfil.html:17
+#: .\usuarios\templates\editarUsuario.html:17
+#: .\usuarios\templates\listarUsuarios.html:17
+msgid "Email"
+msgstr "Email"
+
+#: .\usuarios\templates\cadastrarUsuario.html:16
+#: .\usuarios\templates\loginUser.html:13
+msgid "Senha"
+msgstr "Password"
+
+#: .\usuarios\templates\cadastrarUsuario.html:17
+msgid "Confirmação de Senha"
+msgstr "Password confirmation"
+
+#: .\usuarios\templates\editarPerfil.html:9
+#: .\usuarios\templates\editarUsuario.html:9
+msgid "Editar Perfil de Usuário"
+msgstr "Edit User Profile"
+
+#: .\usuarios\templates\editarPerfil.html:18
+#: .\usuarios\templates\editarUsuario.html:18
+msgid "Telefone"
+msgstr "Telephone"
+
+#: .\usuarios\templates\editarPerfil.html:19
+#: .\usuarios\templates\editarUsuario.html:19
+msgid "Endereço Completo"
+msgstr "Complete Address"
+
+#: .\usuarios\templates\editarPerfil.html:20
+#: .\usuarios\templates\editarUsuario.html:20
+msgid "Idade"
+msgstr "Age"
+
+#: .\usuarios\templates\loginUser.html:11
+msgid "Efetuar Login"
+msgstr "Login"
+
+#: .\usuarios\templates\loginUser.html:15
+msgid "Esqueceu a senha?"
+msgstr "Forgot your password?"
+
+#: .\usuarios\views.py:224
+msgid "Usuário não pode ser deletado pois está associado a uma prova!"
+msgstr "User can't be deleted because it's associated to one Test"
+
+#: .\usuarios\views.py:226
+msgid ""
+"Usuário não pode ser deletado pois está associado a uma ou mais matérias"
+msgstr "User can't be deleted because it's associated to one or more matters"
+
+#: .\usuarios\views.py:233
+msgid "Usuário não pode ser deletado pois está associado a um ou mais pedidos"
+msgstr "User can't be deleted because it's associated to one or more orders"
+
+#: .\usuarios\views.py:235
+msgid "Usuário não pode ser deletado pois ele é admin"
+msgstr "User can't be deleted because it's an admin"
+
+#~ msgid "Inserir Nota Usuário"
+#~ msgstr "Insert User Score"
+
+#~ msgid "Informe uma data e selecione um usuário"
+#~ msgstr "Inform one date and select one user"
+
+#~ msgid "Avançar"
+#~ msgstr "Next"
+
+#~ msgid "Não é possível arquivar prova pois a mesma não possui nota!"
+#~ msgstr ""
+#~ "It's not possible to archive test because it doesn't have any score!"
+
+#~ msgid "Inserir Nota Aluno"
+#~ msgstr "Insert Student Score"
+
+#~ msgid "Nota minima"
+#~ msgstr "Minimun Score"
+
+#~ msgid "Cadastrar Usuário Matérias"
+#~ msgstr "Register User Matter"

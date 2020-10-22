@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+  <a href="{% url 'menuCategorias' %}"> <button type="button"> {% trans "Voltar" %} </button></a>
+</div>
+  {% for produto in produtos %}
+      {% if produto.status_produto == 'ativo' and idioma == produto.idioma %}
+        {% if produto.img_produto %}
+              <div class="prod-menu">
+                <a href="{% url 'viewDetalhesProduto' produto.id %}"> <h3> {{ produto.nome_produto }} </h3> <img src="{{ produto.img_produto.url }}" class="box-menu img">  </a>
+              </div>
+        {% endif %}
+      {% endif %}
+  {% endfor %}
+{% endblock %}

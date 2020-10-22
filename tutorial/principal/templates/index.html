@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+{% endblock %}
+
+{% block body %}
+    <h2> {% trans "Página Inicial" %} </h2>
+    <h3> <p> {% trans "Bem vindos a página inicial de Python 3 com Django" %} </p> </h3>
+    {% if request.user.is_authenticated %}
+      <p> {% trans "Bem vindo" %} {{ request.user }} </p>
+      <p> {% trans "Grupo" %}: {{request.user.groups.all.0.name}} </p>
+    {% endif %}
+    <h3 style="color:blue;"> {{ mensagem }} </h3>
+{% endblock %}

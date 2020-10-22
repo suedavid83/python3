@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+  <h2 style="color:blue;"> {{ mensagem }} </h2>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">{% trans "Nome Categoria" %}</th>
+      <th scope="col">{% trans "Descrição Categoria" %}</th>
+      <th scope="col">{% trans "Status Categoria" %}</th>
+      <th scope="col">{% trans "Idioma" %}</th>
+      <th scope="col">{% trans "Imagem Categoria" %}</th>
+      <th scope="col">{% trans "Editar" %}</th>
+      <th scope="col">{% trans "Excluir" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for categoria in categorias %}
+      {% if categoria.status_categoria == 'ativa' and idioma == categoria.idioma %}
+          <tr>
+            <td>{{ categoria.nome_categoria }}</td>
+            <td>{{ categoria.des_categoria }}</td>
+            <td>{{ categoria.status_categoria }}</td>
+            <td>{{ categoria.idioma }}</td>
+            {% if categoria.img_categoria %}
+                  <td><img width="50px" height="50px" src="{{categoria.img_categoria.url}}"/></td>
+            {% else %}
+              <td></td>
+            {% endif %}
+            <td> <a href="{% url 'editarCategoria' categoria.id %}"> <img width="30px" height="30px" src="{% static 'images/editar.jpg' %}"/> </a> </td>
+            <td> <a href="{% url 'deleteCategoria' categoria.id %}"> <img width="20px" height="20px" src="{% static 'images/cancel.png' %}"/> </a> </td>
+          </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

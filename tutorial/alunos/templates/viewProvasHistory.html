@@ -1,0 +1,61 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "View Provas History" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h3 style="color:blue;"> {{ mensagem }} <h3>
+    <form method="POST" action="{% url 'filtrarMateriaHistory' %}">
+         {% csrf_token %}
+        <select name="materias" style="font-size:24px;">
+          <option disabled="true" selected> --{% trans "Selecione uma Matéria" %}-- </option>
+           {% for materia in materias %}
+              <option value="{{ materia.materia_id }}"> {{ materia.nome_materia }} </option>
+           {% endfor %}
+        </select>
+        <button type="submit"> {% trans "Filtrar" %} </button>
+    </form>
+    <form method="POST" action="{% url 'filtrarProvaAluno' %}">
+         {% csrf_token %}
+        <select name="usuario" style="font-size:24px;">
+          <option disabled="true" selected> --{% trans "Selecione um Usuário" %}-- </option>
+           {% for usuario in usuarios %}
+              <option value="{{ usuario.user_id }}"> {{ usuario.username }} </option>
+           {% endfor %}
+        </select>
+        <button type="submit"> {% trans "Filtrar" %} </button>
+    </form>
+   <table class="table">
+   <thead class="thead-dark">
+     <tr>
+       <th scope="col">{% trans "Aluno" %}</th>
+       <th scope="col">{% trans "Matéria" %}</th>
+       <th scope="col">{% trans "Qtde. Perguntas" %}</th>
+       <th scope="col">{% trans "Status" %}</th>
+       <th scope="col">{% trans "Nota" %}</th>
+       <th scope="col">{% trans "Resultado" %}</th>
+     </tr>
+   </thead>
+   <tbody>
+     {% for prova in provas %}
+           <tr>
+             <td> <a href="{% url 'mostrarDetalhesProva' prova.prova_id %}">{{ prova.username }} </a> </td>
+             <td>{{ prova.nome_materia }}</td>
+             <td>{{ prova.qtde_perguntas }}</td>
+             <td>{{ prova.status }}</td>
+             <td>{{ prova.nota }}</td>
+             {% if prova.nota < prova.nota_minima %}
+                  <td style="color:red;">{% trans "Falhou" %}</td>
+             {% else %}
+                  <td>{% trans "Passou" %}</td>
+             {% endif %}
+           </tr>
+     {% endfor %}
+   </tbody>
+ </table>
+</div>
+{% endblock %}

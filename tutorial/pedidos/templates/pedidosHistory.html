@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+  <form method="POST" action="{% url 'filtrarPedidos' %}">
+       {% csrf_token %}
+      <select name="data" style="font-size:24px;">
+        <option disabled="true" selected> --{% trans "Selecione uma Data" %}-- </option>
+         {% for date in dates %}
+            <option value="{{ date.dt_pedido }}"> {{ date.dt_pedido }} </option>
+         {% endfor %}
+      </select>
+      <button type="submit"> {% trans "Filtrar" %} </button>
+  </form>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">{% trans "Usuário" %}</th>
+      <th scope="col">{% trans "Nr. Pedido" %}</th>
+      <th scope="col">{% trans "Produto" %}</th>
+      <th scope="col">{% trans "Quantidade" %}</th>
+      <th scope="col">{% trans "Preço Unitário" %}</th>
+      <th scope="col">{% trans "Valor Total" %}</th>
+      <th scope="col">{% trans "Status Pedido" %}</th>
+      <th scope="col">{% trans "Dt_Hr_Pedido" %}</th>
+      <th scope="col">{% trans "Dt_Hr_Pronto" %}</th>
+      <th scope="col">{% trans "Dt_Hr_Entregue" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for pedido in pedidos %}
+        <tr>
+          <td> {{ pedido.username }} </td>
+          <td>{{ pedido.nr_pedido }}</td>
+          <td>{{ pedido.nome_produto }}</td>
+          <td>{{ pedido.quantidade }}</td>
+          <td>{{ pedido.preco_unitario }}</td>
+          <td>{{ pedido.valor_total }}</td>
+          <td>{{ pedido.status_pedido }}</td>
+          <td>{{ pedido.dt_hr_insercao }}</td>
+          <td>{{ pedido.dt_hr_pronto }}</td>
+          <td>{{ pedido.dt_hr_entregue }}</td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

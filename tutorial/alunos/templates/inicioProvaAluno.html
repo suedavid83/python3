@@ -1,0 +1,27 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Início Prova Aluno" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h3 style="color:blue;"> {{ mensagem }} <h3>
+    {% if request.user.is_authenticated %}
+          <form method="post" action="{% url 'listarPerguntasProva' %}">
+            {% csrf_token %}
+              <p> <label>{% trans "Aluno" %}:</label> {{ request.user.username }} </p>
+              <p><label>{% trans "Escolha a matéria que deseja realizar a prova" %}:</label>
+                <select name="materia" style="font-size:24px;">
+                  <option value="" selected>{% trans "Selecione uma matéria" %}</option>
+                   {% for materia in materias %}
+                      <option value="{{ materia.materia_id }}"> {{ materia.nome_materia }} </option>
+                   {% endfor %}
+                </select>
+               <button type="submit"> {% trans "Ver Prova" %} </button> </p>
+           </form>
+    {% endif %}
+</div>
+{% endblock %}

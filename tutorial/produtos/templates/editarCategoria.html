@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+  <h1> {% trans "Editar Categoria" %} </h1>
+    <form method="post" enctype="multipart/form-data" action="{% url 'salvarAlteracoesCategoria' categoria.id %}">
+      {% csrf_token %}
+        <p><label for="id_nome_categoria">{% trans "Nome Categoria" %}:</label> <input type="text" name="nome_categoria" maxlength="30" required id="id_nome_categoria" value="{{ categoria.nome_categoria}}"></p>
+        <p><label for="id_des_categoria">{% trans "Descrição Categoria" %}:</label> <input type="text" name="des_categoria" maxlength="50" id="id_des_categoria" value="{{ categoria.des_categoria}}"></p>
+        <p><label for="id_status_categoria">{% trans "Status Categoria" %}:</label> <select name="status_categoria" id="id_status_categoria" value="{{ categoria.status_categoria}}">
+            <option value="ativa">{% trans "Ativa" %}</option>
+            <option value="inativa">{% trans "Inativa" %}</option>
+        </select></p>
+        <p><label for="id_img_categoria">{% trans "Imagem Categoria" %}:</label> <input type="file" name="img_categoria" id="id_img_categoria"></p>
+        {% if categoria.img_categoria %}
+            <p> <img width="200px" height="150px" src="{{categoria.img_categoria.url}}"/></td> </br>
+        {% endif %}
+        <p><label for="id_idioma">{% trans "Idioma" %}:</label> <select name="idioma" required id="id_idioma" value="{{ categoria.idioma}}">
+            <option value="{{ categoria.idioma }}" selected>{{ categoria.idioma }}</option>
+            {% for idioma in idiomas %}
+              <option value="{{ idioma.codigo }}"> {{idioma.codigo }} </option>
+            {% endfor %}
+        </select></p>
+        <button type="submit"> {% trans "Salvar Alterações" %} </button>
+    </form>
+</div>
+{% endblock %}

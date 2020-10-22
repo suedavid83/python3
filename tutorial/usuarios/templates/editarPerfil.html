@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h1> {% trans "Editar Perfil de Usuário" %} </h1>
+    <form method="post" action="{% url 'salvarAlteracoesUsuario' usuario.username %}">
+      {% csrf_token %}
+      <p><label for="id_user">{% trans "Usuário" %}:</label> <select name="user" required id="id_user">
+        <option value="{{ usuario.id }}" selected>{{ usuario.username }}</option>
+      </select></p>
+      <p><label for="id_first_name">{% trans "Primeiro Nome" %}:</label> <input type="text" name="first_name" maxlength="30" id="id_first_name" value="{{ usuario.first_name }}"></p>
+      <p><label for="id_last_name">{% trans "Último Nome" %}:</label> <input type="text" name="last_name" maxlength="150" id="id_last_name" value="{{ usuario.last_name }}"></p>
+      <p><label for="id_email">{% trans "Email" %}:</label> <input type="email" name="email" maxlength="254" id="id_email" value="{{ usuario.email }}"></p>
+      <p><label for="id_telefone">{% trans "Telefone" %}:</label> <input type="number" name="telefone" id="id_telefone" value="{{ profile.telefone }}"></p>
+      <p><label for="id_endereco_completo">{% trans "Endereço Completo" %}:</label> <input type="text" name="endereco_completo" maxlength="500" id="id_endereco_completo" value="{{ profile.endereco_completo }}"></p>
+      <p><label for="id_idade">{% trans "Idade" %}:</label> <input type="number" name="idade" id="id_idade" value="{{ profile.idade}}"></p>
+        <button type="submit"> {% trans "Salvar Alterações" %} </button>
+    </form>
+</div>
+{% endblock %}

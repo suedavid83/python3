@@ -1,0 +1,31 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Criar Pergunta" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <form method="post" action="{% url 'inserirPergunta' %}">
+    {% csrf_token %}
+    <h3 style="color:blue;"> {{ mensagem }} </h3>
+      <p><label>{% trans "Matérias" %}:</label>
+        <select name="materia" style="font-size:24px;">
+          {% if nome_materia is not null %}
+                <option value="{{materia_id}}" selected>{{nome_materia}}</option>
+          {% else %}
+                <option value="" selected>---------</option>
+          {% endif %}
+           {% for materia in materias %}
+              <option value="{{ materia.id }}"> {{ materia.nome }} </option>
+           {% endfor %}
+        </select> </p>
+      <p> <label for="peso"> {% trans "Peso pergunta" %}: </label> <input type="number" style="width: 3em;" name="peso" min=1 max=10 value="{{ peso }}"> </p>
+      <p> <label for="pergunta"> {% trans "Informe a pergunta" %}: </label> </p>
+      <p> <textarea name="pergunta" placeholder="Digita sua pergunta aqui" maxlength="1000" rows="3" cols="100">{{ pergunta }}</textarea> </p>
+      <p> <button type="submit"> {% trans "Salvar Pergunta" %} </button> </p>
+   </form>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h3 style="color:blue;">{{ mensagem }} </h3>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">{% trans "Usuário" %}</th>
+      <th scope="col">{% trans "Primeiro Nome" %}</th>
+      <th scope="col">{% trans "Último Nome" %}</th>
+      <th scope="col">{% trans "Email" %}</th>
+      <th scope="col">{% trans "Grupo" %}</th>
+      <th scope="col">{% trans "Editar" %}</th>
+      <th scope="col">{% trans "Excluir" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for usuario in usuarios %}
+      <tr>
+        <td>{{ usuario.username }}</td>
+        <td>{{ usuario.first_name }}</td>
+        <td>{{ usuario.last_name }}</td>
+        <td>{{ usuario.email }}</td>
+        <td>{{ usuario.nome_grupo }}</td>
+        <td> <a href="{% url 'editarUsuario' usuario.user_id %}"> <img width="30px" height="30px" src="{% static 'images/editar.jpg' %}"/> </a> </td>
+        <td> <a href="{% url 'deleteUsuario' usuario.user_id %}"> <img width="20px" height="20px" src="{% static 'images/cancel.png' %}"/> </a> </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

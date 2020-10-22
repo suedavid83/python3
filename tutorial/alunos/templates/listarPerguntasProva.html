@@ -1,0 +1,28 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Listar Perguntas Prova" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% if request.user.is_authenticated %}
+        <form method="post" action="{% url 'salvarProva' %}">
+          {% csrf_token %}
+          <p> <label for="data"> {% trans "Data" %}: </label> <input type="text" name="data" value="{{ data }}" hidden> {{ data }} </p>
+          <p> <label for="aluno"> {% trans "Aluno" %}: {{ request.user.username }} </label> </p>
+          <p> <label for="materia"> {% trans "Matéria" %}: <input readonly=True type="text" name="materia" value="{{ nome_materia }}" hidden> {{ nome_materia }} </label> </p>
+          {% for resposta in respostas %}
+              <p> <label for="id_nr_pergunta"> {% trans "Pergunta" %}: <input size="2" readonly=True type="text" name="nr_pergunta" value="{{ resposta.nr_pergunta }}" hidden> {{ resposta.nr_pergunta }}: <input size=87 readonly=True type="text" name="pergunta" value="{{ resposta.pergunta }}" hidden> {{ resposta.pergunta }} </label> </p>
+              <p> <label for="id_peso"> {% trans "Peso" %}: <input size="2" readonly=True type="number" name="peso" value="{{ resposta.peso }}" hidden> {{ resposta.peso }} </label> </p>
+              <p> <label for="resposta"> {% trans "Resposta" %} <textarea name="resposta" maxlength="1000" rows="3" cols="100">{{ resposta.resposta }}</textarea> </p>
+          {% endfor %}
+          <button type="submit"> {% trans "Salvar" %} </button> </br></br>
+          <p> {% trans "Antes de concluir a prova certifique-se de salvá-la antes, caso tenha feito alguma alteração!" %} </p>
+          <p> <a href="{% url 'concluirProva' nome_materia %}"> <button type="button"> {% trans "Concluir Prova" %} </button> </a> </p>
+        </form>
+   {% endif %}
+</div>
+{% endblock %}

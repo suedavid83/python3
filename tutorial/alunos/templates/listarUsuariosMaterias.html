@@ -1,0 +1,34 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Listar Notas Usuários" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h1> {% trans "Listar Notas Usuários" %} </h1>
+  <h2 style="color:blue;"> {{ mensagem }} </h2>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">{% trans "Usuário" %}</th>
+      <th scope="col">{% trans "Matérias" %}</th>
+      <th scope="col">{% trans "Editar" %}</th>
+      <th scope="col">{% trans "Excluir" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for materia in viewMateriasUsuario %}
+          <tr>
+            <td>{{ materia.username }}</td>
+            <td>{{ materia.materias }}</td>
+            <td> <a href="{% url 'editarMateriaUsuario' materia.username %}"> <img width="30px" height="30px" src="{% static 'images/editar.jpg' %}"/> </a> </td>
+            <td> <a href="{% url 'deleteUsuarioMateria' materia.username %}"> <img width="20px" height="20px" src="{% static 'images/cancel.png' %}"/> </a> </td>
+          </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+  <h2 style="color:blue;"> {{ mensagem }} </h2>
+  <form method="POST" action="{% url 'filtrarNotasUsuarioData' %}">
+       {% csrf_token %}
+      <select name="data" style="font-size:24px;">
+        <option disabled="true" selected> --{% trans "Selecione uma Data" %}-- </option>
+         {% for data in datas %}
+            <option value="{{ data.data }}"> {{ data.data }} </option>
+         {% endfor %}
+      </select>
+      <button type="submit"> {% trans "Filtrar" %} </button>
+  </form>
+  <form method="POST" action="{% url 'filtrarNotasUsuario' %}">
+       {% csrf_token %}
+      <select name="user" style="font-size:24px;">
+        <option disabled="true" selected> --{% trans "Selecione um Usuário" %}-- </option>
+         {% for usuario in usuarios %}
+            <option value="{{ usuario.user_id }}"> {{ usuario.username }} </option>
+         {% endfor %}
+      </select>
+      <button type="submit"> {% trans "Filtrar" %} </button>
+  </form>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">{% trans "Data" %}</th>
+      <th scope="col">{% trans "Usuário" %}</th>
+      <th scope="col">{% trans "Matéria" %}</th>
+      <th scope="col">{% trans "Nota" %}</th>
+      <th scope="col">{% trans "Resultado" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for nota in viewNotas %}
+          <tr>
+            <td>{{ nota.data }}</td>
+            <td>{{ nota.username }}</td>
+            <td>{{ nota.materia }}</td>
+            <td>{{ nota.nota }}</td>
+            {% if nota.nota < nota.nota_minima %}
+                <td style="color:red;">{% trans "Falhou" %}</td>
+            {% else %}
+                <td>{% trans "Passou" %}</td>
+            {% endif %}
+          </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

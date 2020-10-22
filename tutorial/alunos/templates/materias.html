@@ -1,0 +1,30 @@
+{% extends 'base2.html' %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Cadastro de Matérias" %} </title>
+<script>
+function fileSelect(id, e){
+    var filename = e.target.files[0].name;
+    el = document.getElementById("arq-select");
+  	$('#arq-select').html(filename);
+};
+</script>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1> {% trans "Cadastrar Materia" %} </h1>
+  <form method="post" action="{% url 'cadastrarMateria' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p><label for="id_nome">{% trans "Nome" %}:</label> <input type="text" name="nome" maxlength="30" id="id_nome"></p>
+    <p><label for="id_nota_minima">{% trans "Nota Mínima" %}:</label> <input type="number" name="nota_minima" step="0.01" id="id_nota_minima"></p>
+    <p><label for="id_nota_maxima">{% trans "Nota Máxima"%}:</label> <input type="number" name="nota_maxima" step="0.01" id="id_nota_maxima"></p>
+    <p><label for="id_img_materia">{% trans "Imagem Matéria" %}:</label>
+      <label for="img_materia" class="btn-file">{% trans "Escolher arquivo" %}</label>
+        <div id="arq-select"> {% trans "Nenhum arquivo selecionado" %} </div>
+          <input id="img_materia" type="file" name="img_materia" onchange='fileSelect(img_materia, event)' />
+    <button type="submit"> Salvar </button>
+  </form>
+</div>
+{% endblock %}

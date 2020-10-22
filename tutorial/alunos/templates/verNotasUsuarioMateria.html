@@ -1,0 +1,34 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+  <img src="{{ materia.img_materia.url }}" height="100px;" width="100px;"> <label for="img_materia"> {{materia.nome}}
+    <h2 style="color:blue;"> {{ mensagem }} </h2>
+    <p> {% trans "Usuário" %} {{ request.user.username }} </p>
+    <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">{% trans "Data" %}</th>
+        <th scope="col">{% trans "Matéria" %}</th>
+        <th scope="col">{% trans "Nota" %}</th>
+        <th scope="col">{% trans "Resultado" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for nota in viewUsuariosNotas %}
+          <tr>
+            <td>{{ nota.data }}</td>
+            <td>{{ nota.materia }}</td>
+            <td>{{ nota.nota }}</td>
+            {% if nota.nota < nota.nota_minima %}
+                <td style="color:red;">{% trans "Falhou" %}</td>
+            {% else %}
+                <td>{% trans "Passou" %}</td>
+            {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,255 @@
+.principal-inicial {
+  width: 1300px;
+  height: auto;
+  margin-top: 30px;
+  margin-right: 0px;
+  margin-left: -50px;
+  padding: 0px;
+  padding-bottom: -100px;
+  float: left;
+  position: absolute;
+}
+
+.prod-menu {
+  width: 130px;
+  height: 300px;
+  margin-top: 30px;
+  margin-right: 0px;
+  margin-left: 150px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  float: left;
+  position: relative;
+  display: inline-block;
+}
+
+.prod-menu img {
+  width: 250px;
+  position:relative;
+  height: 200px;
+  padding: 15px;
+  padding-left: 10px;
+  margin-top: 0px;
+  margin-left: -125px;
+  float: left;
+  z-index: 1;
+}
+
+.prod-menu h3 {
+   width: 230px;
+   height: 50px;
+   border: 10spx solid;
+   z-index: 2;
+   margin-top: 10px;
+   margin-left: -120px;
+   float: left;
+   position: relative;
+   text-align: center;
+   background-color: black;
+   line-height: 40px;
+   font-size: 18px;
+}
+
+.prod-menu a, .prod-menu a:link, .prod-menu a:visited {
+  color: white;
+}
+
+.prod-menu a, .prod-menu a:hover, .prod-menu a:focus, .prod-menu a:active {
+  color: red;
+}
+
+.box-menu {
+  width: 130px;
+  height: 300px;
+  margin-top: 30px;
+  margin-right: 0px;
+  margin-left: -40px;
+  padding: 50px;
+  float: left;
+  z-index: 0;
+  position: relative;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 0px;
+  font-size: 16px;
+}
+
+.box-menu h3   {
+   width: 200px;
+   height: 40px;
+   border: 5px solid;
+   z-index: 1;
+   margin-top: 10px;
+   margin-left: 40px;
+   float: left;
+   position: relative;
+   text-align: center;
+   background-color: black;
+   line-height: 70px;
+   padding-bottom: 10px;
+}
+
+.box-menu img {
+  width: 200px;
+  height: 300px;
+  margin-top: -50px;
+}
+
+.box-menu a, .cat-menu a, .cat-menu a:link, .box-menu a:link, .box-menu a:hover, .cat-menu a:hover, .box-menu a:focus, .cat-menu a:focus, .box-menu a:active, .cat-menu a:active, .box-menu a:visited, .cat-menu a:visited {
+    color: white;
+}
+
+.prod-menu a, .prod-menu a:link, .prod-menu a:visited {
+  color: white;
+}
+
+.box-menu a, .box-menu a:hover, .box-menu a:focus, .box-menu a:active {
+    color: red;
+}
+
+.prod-det {
+  width: 50%;
+  height: 600px;
+  margin-top: -100px;
+  margin-right: 0px;
+  margin-left: 100px;
+  padding: 120px;
+  float: left;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-produto {
+   width: 600px;
+   height: 20px;
+   margin-top: 60px;
+   margin-left: 300px;
+   float: left;
+   position: relative;
+   color: black;
+}
+
+.descricao-produto {
+  width: 600px;
+  height: 20px;
+  margin-top: 150px;
+  margin-left: 700px;
+  float: left;
+  position: absolute;
+  color: black;
+  font-size: 24px;
+}
+
+.bandeiras {
+  position: absolute;
+  float: right;
+  margin-top: 10px;
+  margin-left: 1150px;
+}
+
+.menu-principal {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mainmenubtn {
+background-color: red;
+color: white;
+border: none;
+cursor: pointer;
+padding:10px;
+margin-top:10px;
+}
+
+.mainmenubtn:hover {
+background-color: red;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropdown-child {
+display: none;
+background-color: black;
+min-width: 100px;
+}
+.dropdown-child a {
+color: white;
+padding: 10px;
+text-decoration: none;
+display: block;
+}
+.dropdown:hover .dropdown-child {
+display: block;
+}
+
+[type=file] {
+    position: absolute;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+[type=file] {
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  text-align: left;
+  padding: 10px;
+  width: 150px;
+  height: 10px;
+  margin: 0;
+  left: 0;
+  position: relative;
+}
+[type=file] {
+  text-align: center;
+  left: 7.35em;
+  top: 0.5em;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+[type=file] + label:hover {
+  background: #3399ff;
+}
+
+.btn-file {
+  background: #333;
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-left: 10px;
+  position: absolute;
+  float: right;
+}
+
+.btn-file-editar {
+  background: #333;
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-left: 100px;
+  position: absolute;
+  float: right;
+}
+
+#arq-select2 {
+  margin-top: 0px;
+  margin-left: 280px;
+  position: relative;
+}
+
+#arq-select {
+  margin-top: -30px;
+  margin-left: 280px;
+  position: relative;
+}

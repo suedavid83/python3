@@ -1,0 +1,29 @@
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title>{% trans "Imprimir Pedidos Cliente" %}</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="striped">
+  <table class="print-table">
+   <label> <h2> {% trans "Pedidos Cliente" %}:  {{ username }} </h2> </label>
+   <tr>  <th> {% trans "Nr. Pedido" %} </th> <th> {% trans "Produto" %} </th> <th> {% trans "Quantidade" %} </th> <th> {% trans "Preço Unitário" %} </th> <th> {% trans "Total" %} </th> <th> {% trans "Status" %} </th>
+    </tr>
+      {% for ped in viewPedidos %}
+         <tr>
+            <td> {{ ped.nr_pedido }} </td>
+            <td> {{ ped.nome_produto}} </td>
+            <td> {{ped.quantidade}} </td>
+            <td> R$ {{ ped.preco_unitario }}  </td>
+            <td> R$ {{ ped.valor_total }} </td>
+            <td> {{ ped.status_pedido }} </td>
+          </tr> </br>
+      {% endfor %}
+    <tr> </tr><tr> </tr>
+      <tr> <td colspan="10" text-align="margin-right"> <h2> {% trans "Total: R$" %} {{ totalProdutos }} </h2> </td> </tr>
+    </table>
+</div>
+{% endblock %}

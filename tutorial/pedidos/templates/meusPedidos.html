@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+  <h3 style="color:blue;"> {{ mensagem }} </h3>
+  <h2> {% trans "Pedidos Pendentes" %}
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">{% trans "Usuário" %}</th>
+      <th scope="col">{% trans "Número Pedido" %}</th>
+      <th scope="col">{% trans "Nome Produto" %}</th>
+      <th scope="col">{% trans "Preço Unitário" %}</th>
+      <th scope="col">{% trans "Quantidade" %}</th>
+      <th scope="col">{% trans "Valor Total" %}</th>
+      <th scope="col">{% trans "Status Pedido" %}</th>
+      <th scope="col">{% trans "Dt_Hr_Inserção" %}</th>
+      <th scope="col">{% trans "Ação" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for pedido in meusPedidosPendentes %}
+      <tr>
+        <td>{{ pedido.username }}</td>
+        <td>{{ pedido.nr_pedido }}</td>
+        <td>{{ pedido.nome_produto }}</td>
+        <td>{{ pedido.preco_unitario }}</td>
+        <td>{{ pedido.quantidade }}</td>
+        <td>{{ pedido.valor_total }}</td>
+        <td> {{ pedido.status_pedido }} </td>
+        <td> {{ pedido.dt_hr_insercao }} </td>
+        <td> <a href="{% url 'deletePedidoCliente' pedido.nr_pedido pedido.user_id %}"> <img width="20px" height="20px" src="{% static 'images/cancel.png' %}"/> </a> </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<hr>
+<h2> {% trans "Pedidos Prontos" %}
+<table class="table">
+<thead class="thead-dark">
+  <tr>
+    <th scope="col">{% trans "Usuário" %}</th>
+    <th scope="col">{% trans "Número Pedido" %}</th>
+    <th scope="col">{% trans "Nome Produto" %}</th>
+    <th scope="col">{% trans "Preço Unitário" %}</th>
+    <th scope="col">{% trans "Quantidade" %}</th>
+    <th scope="col">{% trans "Valor Total" %}</th>
+    <th scope="col">{% trans "Status Pedido" %}</th>
+    <th scope="col">{% trans "Dt_Hr_Pronto" %}</th>
+  </tr>
+</thead>
+<tbody>
+  {% for pedido in meusPedidosProntos %}
+    <tr>
+      <td>{{ pedido.username }}</td>
+      <td>{{ pedido.nr_pedido }}</td>
+      <td>{{ pedido.nome_produto }}</td>
+      <td>{{ pedido.preco_unitario }}</td>
+      <td>{{ pedido.quantidade }}</td>
+      <td>{{ pedido.valor_total }}</td>
+      <td> {{ pedido.status_pedido }} </td>
+      <td> {{ pedido.dt_hr_pronto }} </td>
+    </tr>
+  {% endfor %}
+</tbody>
+</table>
+<hr>
+<h2> {% trans "Pedidos Entregues" %}
+<table class="table">
+<thead class="thead-dark">
+  <tr>
+    <th scope="col">{% trans "Usuário" %}</th>
+    <th scope="col">{% trans "Número Pedido" %}</th>
+    <th scope="col">{% trans "Nome Produto" %}</th>
+    <th scope="col">{% trans "Preço Unitário" %}</th>
+    <th scope="col">{% trans "Quantidade" %}</th>
+    <th scope="col">{% trans "Valor Total" %}</th>
+    <th scope="col">{% trans "Status Pedido" %}</th>
+    <th scope="col">{% trans "Dt_Hr_Entregue" %}</th>
+  </tr>
+</thead>
+<tbody>
+  {% for pedido in meusPedidosEntregues %}
+    <tr>
+      <td>{{ pedido.username }}</td>
+      <td>{{ pedido.nr_pedido }}</td>
+      <td>{{ pedido.nome_produto }}</td>
+      <td>{{ pedido.preco_unitario }}</td>
+      <td>{{ pedido.quantidade }}</td>
+      <td>{{ pedido.valor_total }}</td>
+      <td> {{ pedido.status_pedido }} </td>
+      <td> {{ pedido.dt_hr_entregue }} </td>
+    </tr>
+  {% endfor %}
+</tbody>
+</table>
+</div>
+{% endblock %}

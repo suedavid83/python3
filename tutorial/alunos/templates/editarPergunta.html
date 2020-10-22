@@ -1,0 +1,21 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Editar Pergunta" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+   <h3 style="color:blue;"> {{ mensagem }} </h3>
+    <label for="materia"> {% trans "Matéria" %}: {{ nome_materia }} </label>
+    <form method="post" action="{% url 'salvarAlteracoesPergunta' materia.id %}">
+      {% csrf_token %}
+      <p> <label for="id_nr_pergunta"> {% trans "Número Pergunta" %} </label> <input type="number" min=1 style="width: 3em;" name="nr_pergunta" id="id_nr_pergunta" value="{{ materia.nr_pergunta }}"> </p>
+      <p> <label for="id_peso"> {% trans "Peso" %}: </label> <input type="number" style="width: 3em;" min=1 max=10 name="peso" id="id_peso" value="{{ materia.peso }}"> </p>
+      <p> <label for="id_pergunta">{% trans "Pergunta" %}:</label> <textarea name="pergunta" maxlength="1000" rows="3" cols="100"> {{ materia.pergunta }} </textarea> </p>
+      <button type="submit"> {% trans "Salvar" %} </button>
+    </form>
+</div>
+{% endblock %}

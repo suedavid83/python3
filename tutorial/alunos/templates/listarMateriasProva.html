@@ -1,0 +1,24 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Listar Alunos Matéria" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h3 style="color:blue;"> {{ mensagem }} <h3>
+  <form method="post" action="{% url 'listarAlunosMateria' %}">
+    {% csrf_token %}
+      <p><label>{% trans "Matérias" %}:</label>
+        <select name="materia" style="font-size:24px;">
+          <option value="" selected>{% trans "Selecione uma matéria" %}</option>
+           {% for materia in materias %}
+              <option value="{{ materia.id }}"> {{ materia.nome }} </option>
+           {% endfor %}
+        </select>
+        <button type="submit"> {% trans "Listar Alunos" %} </button> <p>
+   </form>
+</div>
+{% endblock %}

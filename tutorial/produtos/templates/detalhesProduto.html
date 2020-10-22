@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+    <div class="container">
+       <a href="{% url 'viewProdutosCategoria' produto.categoria_id %}"> <button type="button"> {% trans "Voltar" %} </button> </a>
+    </div>
+    <form method="post" enctype="multipart/form-data" action="{% url 'adicionarProduto' produto.id %}">
+      {% csrf_token %}
+        <h1 class="titulo-produto"> {{ produto.nome_produto }} </h1>
+        <img class="prod-det img" src="{{ produto.img_produto.url }}" alt="{{ produto.nome_produto }}" />
+        <div class="descricao-produto">
+          <p> <b> {% trans "Descrição" %}: </b> {{ produto.descricao_produto }} <p>
+          <p> <b> {% trans "Preço" %}: </b> {{ produto.preco_produto }} </p>
+          {% if request.user.is_authenticated %}
+              <p> <b> {% trans "Quantidade" %}: </b> <input name="quantidade" type="number" size="2" min="1" max="20" value="1"> </p>
+              <p> <button type="submit"> {% trans "Comprar" %} </button> </p>
+          {% endif %}
+        </div>
+      </form>
+{% endblock %}

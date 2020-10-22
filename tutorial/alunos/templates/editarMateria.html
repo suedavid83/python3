@@ -1,0 +1,35 @@
+{% extends 'base2.html' %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Editar Matéria" %} </title>
+<script>
+function fileSelect(id, e){
+    var filename = e.target.files[0].name;
+    el = document.getElementById("arq-select");
+  	$('#arq-select').html(filename);
+};
+</script>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1> {% trans "Cadastrar Materia" %} </h1>
+  <form method="post" action="{% url 'salvarAlteracoesMateria' materia.id %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p><label for="id_nome">Nome:</label> <input type="text" name="nome" maxlength="30" id="id_nome" value="{{ materia.nome }}"></p>
+    <p><label for="id_nota_minima">Nota minima:</label> <input type="decimal" name="nota_minima" step='0.01' id="id_nota_minima" value="{{ materia.nota_minima }}"></p>
+    <p><label for="id_nota_maxima">Nota maxima:</label> <input type="decimal" name="nota_maxima" step='0.01' id="id_nota_maxima" value="{{ materia.nota_maxima }}"></p>
+    <p><label for="id_img_materia">{% trans "Imagem Matéria" %}:</label>
+      {% if materia.img_materia %}
+          <img src="{{ materia.img_materia.url }}">
+      {% endif %}
+    </br></br>
+      <label for="img_materia" class="btn-file-editar">{% trans "Escolher arquivo" %}</label>
+        <div id="arq-select2"> {% trans "Nenhum arquivo selecionado" %} </div>
+          <input id="img_materia" type="file" name="img_materia" onchange='fileSelect(img_materia, event)' />
+    </br>
+    <button type="submit"> Salvar </button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Criar Prova Aluno" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h3 style="color:blue;"> {{ mensagem }} <h3>
+  <form method="post" action="{% url 'criarProva' %}">
+    {% csrf_token %}
+      <p><label>{% trans "Matéria" %}:</label> <input readonly=True type="text" name="nome_materia" value="{{ nome_materia }}" </p>
+        <p><label>{{ alunos }}</label> <ul id="id_materias">
+          {% for aluno in list_alunos %}
+              <li><label for="id_aluno"><input type="checkbox" name="aluno" value="{{ aluno }}" id="id_aluno">
+                {{ aluno }}</label>
+              </li>
+          {% endfor %}
+        </ul> <button type="submit"> {% trans "Criar Prova" %} </button>
+   </form>
+</div>
+{% endblock %}

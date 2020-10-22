@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+    <a class="nav-link" href="{% url 'ativarProduto' %}"> <button> {% trans "Ativar Produto" %} </button> </a> </br>
+    <form method="POST" action="{% url 'filtrarCategorias' %}">
+         {% csrf_token %}
+        <select name="categoria" style="font-size:24px;">
+          <option disabled="true" selected> --{% trans "Selecione uma Categoria" %}-- </option>
+           {% for categoria in categorias %}
+              <option value="{{ categoria.id}}"> {{ categoria.nome_categoria }} </option>
+           {% endfor %}
+        </select>
+        <button type="submit"> {% trans "Filtrar" %} </button>
+    </form>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">{% trans "Código Produto" %}</th>
+      <th scope="col">{% trans "Nome Produto" %}</th>
+      <th scope="col">{% trans "Descrição Produto" %}</th>
+      <th scope="col">{% trans "Preço Produto" %}</th>
+      <th scope="col">{% trans "Status" %}</th>
+      <th scope="col">{% trans "Idioma" %}</th>
+      <th scope="col">{% trans "Imagem" %}</th>
+      <th scope="col">{% trans "Editar" %}</th>
+      <th scope="col">{% trans "Excluir" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for produto in produtos %}
+      {% if produto.status_produto == 'ativo' and idioma == produto.idioma %}
+          <tr>
+            <td>{{ produto.codigo_produto }}</td>
+            <td>{{ produto.nome_produto }}</td>
+            <td>{{ produto.descricao_produto }}</td>
+            <td>{{ produto.preco_produto }}</td>
+            <td>{{ produto.status_produto }}</td>
+            <td>{{ produto.idioma }}</td>
+            {% if produto.img_produto %}
+                  <td><img width="50px" height="50px" src="{{produto.img_produto.url}}"/></td>
+            {% else %}
+              <td></td>
+            {% endif %}
+            <td> <a href="{% url 'editarProduto' produto.id %}"> <img width="30px" height="30px" src="{% static 'images/editar.jpg' %}"/> </a> </td>
+            <td> <a href="{% url 'deleteProduto' produto.id %}"> <img width="20px" height="20px" src="{% static 'images/cancel.png' %}"/> </a> </td>
+          </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

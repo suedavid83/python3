@@ -1,0 +1,46 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Lista Perguntas Matéria" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h3 style="color:blue;"> {{ mensagem }} <h3>
+  <form method="post" action="{% url 'listarPerguntas' %}">
+    {% csrf_token %}
+      <p><label>{% trans "Matérias" %}:</label>
+        <select name="materia" style="font-size:24px;">
+          <option value="" selected>{% trans "Selecione uma matéria" %}</option>
+           {% for materia in materias %}
+              <option value="{{ materia.id }}"> {{ materia.nome }} </option>
+           {% endfor %}
+        </select>
+       <button type="submit"> {% trans "Listar Perguntas" %} </button> </p>
+   </form>
+   <table class="table">
+   <thead class="thead-dark">
+     <tr>
+       <th scope="col">{% trans "Número Pergunta" %}</th>
+       <th scope="col">{% trans "Pergunta" %}</th>
+       <th scope="col">{% trans "Peso" %}</th>
+       <th scope="col">{% trans "Editar" %}</th>
+       <th scope="col">{% trans "Excluir" %}</th>
+     </tr>
+   </thead>
+   <tbody>
+     {% for pergunta in perguntas %}
+           <tr>
+             <td>{{ pergunta.nr_pergunta }}</td>
+             <td>{{ pergunta.pergunta }}</td>
+             <td>{{ pergunta.peso }}</td>
+             <td> <a href="{% url 'editarPergunta' pergunta.id %}"> <img width="30px" height="30px" src="{% static 'images/editar.jpg' %}"/> </a> </td>
+             <td> <a href="{% url 'deletePergunta' pergunta.materia_id pergunta.id %}"> <img width="20px" height="20px" src="{% static 'images/cancel.png' %}"/> </a> </td>
+           </tr>
+     {% endfor %}
+   </tbody>
+ </table>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1> {% trans "Alterar Senha Usuário" %} </h1>
+      <form method="POST">
+        {% csrf_token %}
+        <p><label for="id_old_password">{% trans "Antiga Senha" %}:</label> <input type="password" name="old_password" autofocus required id="id_old_password"></p>
+        <p><label for="id_new_password1">{% trans "Nova Senha" %}:</label> <input type="password" name="new_password1" required id="id_new_password1"> </p>
+        <p><label for="id_new_password2">{% trans "Confirmar Nova Senha" %}:</label> <input type="password" name="new_password2" required id="id_new_password2"></p>
+          <button type="submit"> {% trans "Alterar Senha" %} </button>
+      </form>
+</div>
+{% endblock %}

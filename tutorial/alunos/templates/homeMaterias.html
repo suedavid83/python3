@@ -1,0 +1,19 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Home Materias" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+{% for materia in materias %}
+    {% if materia.img_materia %}
+          <div class="prod-menu">
+            <a href="{% url 'viewMateriasUsuario' materia.id %}"> <h3> {{ materia.nome }} </h3> <img src="{{ materia.img_materia.url }}" class="box-menu img">  </a>
+          </div>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Lista Perguntas Matéria" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h3 style="color:blue;"> {{ mensagem }} <h3>
+   <table class="table">
+   <thead class="thead-dark">
+     <tr>
+       <th scope="col">{% trans "Matéria" %}</th>
+       <th scope="col">{% trans "Aluno" %}</th>
+       <th scope="col">{% trans "Qtde. Perguntas" %}</th>
+       <th scope="col">{% trans "Status" %}</th>
+       <th scope="col">{% trans "Nota" %}</th>
+       <th scope="col">{% trans "Visualizar" %}</th>
+       <th scope="col">{% trans "Excluir" %}</th>
+       <th scope="col">{% trans "Arquivar" %}</th>
+     </tr>
+   </thead>
+   <tbody>
+     {% for resposta in respostas %}
+           <tr>
+             <td>{{ resposta.nome_materia }}</td>
+             <td>{{ resposta.usuario }}</td>
+             <td>{{ resposta.qtde_perguntas }}</td>
+             <td>{{ resposta.status }}</td>
+             <td>{{ resposta.nota }}</td>
+             <td> <a href="{% url 'verProvaAluno' resposta.materia_id resposta.usuario %}"> <img width="20px" height="20px" src="{% static 'images/editar.jpg' %}"/> </a> </td>
+             <td> <a href="{% url 'deleteProva' resposta.materia_id resposta.usuario %}"> <img width="20px" height="20px" src="{% static 'images/cancel.png' %}"/> </a> </td>
+             {% if resposta.status == "Finalizado" %}
+              <td> <a href="{% url 'arquivarProva' resposta.materia_id resposta.usuario %}"> {% trans "Arquivar" %} </a> </td>
+             {% endif %}
+           </tr>
+     {% endfor %}
+   </tbody>
+ </table>
+</div>
+{% endblock %}

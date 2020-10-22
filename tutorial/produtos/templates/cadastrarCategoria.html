@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block head %}
+<script>
+function fileSelect(id, e){
+    var filename = e.target.files[0].name;
+    el = document.getElementById("arq-select");
+  	$('#arq-select').html(filename);
+};
+</script>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h1> {% trans "Cadastro de Categoria" %} </h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+        <p><label for="id_nome_categoria">{% trans "Nome Categoria" %}:</label> <input type="text" name="nome_categoria" maxlength="30" required id="id_nome_categoria"></p>
+        <p><label for="id_des_categoria">{% trans "Descrição Categoria" %}:</label> <input type="text" name="des_categoria" maxlength="50" id="id_des_categoria"></p>
+        <p><label for="id_status_categoria">{% trans "Status Categoria" %}:</label> <select name="status_categoria" id="id_status_categoria">
+            <option value="ativa">{% trans "Ativa" %}</option>
+            <option value="inativa">{% trans "Inativa" %}</option>
+        </select></p>
+        <p><label for="id_img_categoria">{% trans "Imagem Categoria" %}:</label>
+          <label for="img_categoria" class="btn-file">{% trans "Escolher arquivo" %}</label>
+            <div id="arq-select"> {% trans "Nenhum arquivo selecionado" %} </div>
+              <input id="img_categoria" type="file" name="img_categoria" onchange='fileSelect(img_categoria, event)' />
+        <p><label for="id_idioma">{% trans "Idioma" %}:</label> <select name="idioma" required id="id_idioma">
+          {% for idioma in idiomas %}
+            <option value="{{ idioma.codigo }}"> {{idioma.codigo }} </option>
+          {% endfor %}
+        </select></p>
+        <button type="submit"> {% trans "Cadastrar" %} </button>
+    </form>
+</div>
+{% endblock %}

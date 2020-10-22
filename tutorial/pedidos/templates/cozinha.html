@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+<div class="container">
+  <h2> {% trans "Pedidos Pendentes" %} </h2>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">{% trans "Número Pedido" %}</th>
+      <th scope="col">{% trans "Nome Produto" %}</th>
+      <th scope="col">{% trans "Preço Unitário" %}</th>
+      <th scope="col">{% trans "Quantidade" %}</th>
+      <th scope="col">{% trans "Valor Total" %}</th>
+      <th scope="col">{% trans "Status Pedido" %}</th>
+      <th scope="col">{% trans "Dt_Hr_Inserção" %}</th>
+      <th scope="col">{% trans "Usuário" %}</th>
+      <th scope="col">{% trans "Ação" %}</th>
+    </tr>
+  </thead>
+  <tbody>
+        {% for pedido in pedidosPendentes %}
+          <tr>
+            <td>{{ pedido.nr_pedido }}</td>
+            <td>{{ pedido.nome_produto }}</td>
+            <td>{{ pedido.preco_unitario }}</td>
+            <td>{{ pedido.quantidade }}</td>
+            <td>{{ pedido.valor_total }}</td>
+            <td>{{ pedido.status_pedido }}</td>
+            <td>{{ pedido.dt_hr_insercao }}</td>
+            <td>{{ pedido.username }}</td>
+            {% if request.user.is_authenticated and request.user.groups.all.0.name == 'cozinha' or request.user.groups.all.0.name == 'admin'  %}
+                {% if pedido.status_pedido == "Pendente" %}
+                    <td> <a href="{% url 'alteraStatusPedidoCozinha' pedido.nr_pedido pedido.user_id "Pronto" %}"> <button type="submit"> {% trans "Pronto" %} </button> </a>
+                {% endif %}
+            {% endif %}
+          </tr>
+        {% endfor %}
+  </tbody>
+</table>
+<hr>
+<h2> {% trans "Pedidos Prontos" %} </h2>
+<table class="table">
+<thead class="thead-dark">
+  <tr>
+    <th scope="col">{% trans "Número Pedido" %}</th>
+    <th scope="col">{% trans "Nome Produto" %}</th>
+    <th scope="col">{% trans "Preço Unitário" %}</th>
+    <th scope="col">{% trans "Quantidade" %}</th>
+    <th scope="col">{% trans "Valor Total" %}</th>
+    <th scope="col">{% trans "Status Pedido" %}</th>
+    <th scope="col">{% trans "Dt_Hr_Pronto" %}</th>
+    <th scope="col">{% trans "Usuário" %}</th>
+  </tr>
+</thead>
+<tbody>
+      {% for pedido in pedidosProntos %}
+        <tr>
+          <td>{{ pedido.nr_pedido }}</td>
+          <td>{{ pedido.nome_produto }}</td>
+          <td>{{ pedido.preco_unitario }}</td>
+          <td>{{ pedido.quantidade }}</td>
+          <td>{{ pedido.valor_total }}</td>
+          <td>{{ pedido.status_pedido }}</td>
+          <td>{{ pedido.dt_hr_pronto }}</td>
+          <td>{{ pedido.username }}</td>
+        </tr>
+      {% endfor %}
+</tbody>
+</table>
+</div>
+{% endblock %}

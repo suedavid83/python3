@@ -1,0 +1,120 @@
+{% load static %}
+{% load i18n %}
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-reboot.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-reboot.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+        <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+        <script type="text/javascript" scr="{% static 'js/java.js' %}"></script>
+        {%  block head %}
+         <title>Base 2</title>
+        {% endblock %}
+    </head>
+	<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="bandeiras">
+        <table>
+          <td>  <a href="{% url 'setIdioma' "pt" %}"><img width="50px;" height="30px;" src="{% static 'images/bandeira_brasil.png' %}" /></a> </td>
+          <td> </td> <td> </td>
+          <td>  <a href="{% url 'setIdioma' "en" %}"><img width="50px;" height="30px;" src="{% static 'images/bandeira_eua.png' %}" /></a> </td>
+          <td> </td> <td> </td>
+          <td>  <a href="{% url 'setIdioma' "es" %}"><img width="50px;" height="30px;" src="{% static 'images/bandeira_es.jpg' %}" /></a> </td>
+      </table>
+      </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      {% if request.user.groups.all.0.name == 'aluno' or request.user.groups.all.0.name == 'professor' %}
+      {% elif request.user.is_authenticated %}
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'menuCategorias' %}"> Home Restaurante <span class="sr-only">(current)</span></a>
+      </li>
+      {% endif %}
+      {% if request.user.groups.all.0.name == 'cozinha' or request.user.groups.all.0.name == 'garcom' or request.user.groups.all.0.name == 'admin' or request.user.groups.all.0.name == 'usuario' %}
+      {% elif request.user.is_authenticated %}
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'homeMaterias' %}"> Home Escola <span class="sr-only">(current)</span></a>
+          </li>
+      {% endif %}
+      {% if request.user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'alterarSenha' %}">{% trans "Alterar Senha" %}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'editarPerfil' %}">{% trans "Editar Perfil" %}</a>
+              </li>
+            {% if request.user.groups.all.0.name == 'admin' or request.user.groups.all.0.name == 'professor' %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'cadastrarUsuario' %}">{% trans "Cadastrar Usuário" %}</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'listarUsuarios' %}">{% trans "Alterar Usuário" %}</a>
+                </li>
+            {% endif %}
+              <li class="nav-item">
+                <a class="nav-link right" href="{% url 'user_logout' %}">Logout</a>
+              </li>
+        {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login_user' %}">Login</a>
+            </li>
+        {% endif %}
+  </div>
+</div>
+</nav>
+
+{% block content %}
+<div class="menu-principal">
+    <div class="dropdown">
+      {% if request.user.groups.all.0.name == 'cozinha' or request.user.groups.all.0.name == 'garcom' or request.user.groups.all.0.name == 'admin' or request.user.groups.all.0.name == 'usuario' %}
+      {% else %}
+      <button class="mainmenubtn">{% trans "Menu Matérias" %}</button>
+      <div class="dropdown-child">
+            {% if request.user.groups.all.0.name == 'professor' %}
+                <a class="nav-link" href="{% url 'cadastrarMateria' %}">{% trans "Cadastrar Matéria" %}</a>
+                <a class="nav-link" href="{% url 'alterarMateria' %}">{% trans "Editar Matéria" %}</a>
+                <a class="nav-link" href="{% url 'usuariosMaterias' %}">{% trans "Cadastrar Aluno Matérias" %}</a>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                <a class="nav-link" href="{% url 'listarUsuariosMaterias' %}">{% trans "Listar Aluno Matérias" %}</a>
+            {% endif %}
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="mainmenubtn">{% trans "Menu Alunos" %}</button>
+      <div class="dropdown-child">
+            {% if request.user.is_authenticated and request.user.groups.all.0.name == 'professor' or request.user.groups.all.0.name == 'aluno' %}
+                <a class="nav-link" href="{% url 'listarPerguntasMateria' %}">{% trans "Listar Perguntas Matéria" %}</a>
+                {% if request.user.groups.all.0.name == 'aluno' %}
+                  <a class="nav-link" href="{% url 'inicioProvaAluno' %}">{% trans "Fazer Prova" %}</a>
+                {% endif %}
+            {% endif %}
+            {% if request.user.groups.all.0.name == 'professor' %}
+                <a class="nav-link" href="{% url 'criarPergunta' %}">{% trans "Criar Perguntas" %}</a>
+                <a class="nav-link" href="{% url 'listarMateriasProva' %}">{% trans "Criar Prova Aluno" %}</a>
+                <a class="nav-link" href="{% url 'viewNotasUsuarios' %}">{% trans "Ver Notas Alunos" %}</a>
+                <a class="nav-link" href="{% url 'viewProvasAlunos' %}">{% trans "View Provas Alunos" %}</a>
+                <a class="nav-link" href="{% url 'viewProvasHistory' %}">{% trans "View Provas History" %}</a>
+            {% endif %}
+      </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+</body>
+</html>

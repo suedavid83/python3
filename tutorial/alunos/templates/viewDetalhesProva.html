@@ -1,0 +1,63 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "View Provas History" %} </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h3 style="color:blue;"> {{ mensagem }} <h3>
+   <table class="table">
+   <thead class="thead-dark">
+     <tr>
+       <th scope="col">{% trans "Aluno" %}</th>
+       <th scope="col">{% trans "Matéria" %}</th>
+       <th scope="col">{% trans "Qtde. Perguntas" %}</th>
+       <th scope="col">{% trans "Status" %}</th>
+       <th scope="col">{% trans "Nota" %}</th>
+       <th scope="col">{% trans "Resultado" %}</th>
+     </tr>
+   </thead>
+   <tbody>
+       <tr>
+         {% for prova in provas %}
+             <td> <a href="{% url 'viewProvasHistory' %}">{{ prova.username }} </a> </td>
+             <td>{{ prova.nome_materia }}</td>
+             <td>{{ prova.qtde_perguntas }}</td>
+             <td>{{ prova.status }}</td>
+             <td>{{ prova.nota }}</td>
+             {% if prova.nota < prova.nota_minima %}
+                 <td style="color:red;">{% trans "Falhou" %}</td>
+             {% else %}
+                 <td>{% trans "Passou" %}</td>
+             {% endif %}
+        {% endfor %}
+       </tr>
+   </tbody>
+   <thead class="thead-dark">
+     <tr>
+       <th scope="col">{% trans "Data" %}</th>
+       <th scope="col">{% trans "Nr. Pergunta" %}</th>
+       <th scope="col" colspan="2">{% trans "Pergunta" %}</th>
+       <th scope="col">{% trans "Peso" %}</th>
+       <th scope="col">{% trans "Resposta" %}</th>
+       <th scope="col">{% trans "Resultado" %}</th>
+     </tr>
+   </thead>
+   <tbody>
+         {% for resultado in resultados %}
+         <tr>
+             <td> {{ resultado.data }} </td>
+             <td>{{ resultado.nr_pergunta }}</td>
+             <td colspan="2">{{ resultado.pergunta }}</td>
+             <td>{{ resultado.peso }}</td>
+             <td>{{ resultado.resposta }}</td>
+             <td>{{ resultado.resultado }}</td>
+        </tr>
+        {% endfor %}
+   </tbody>
+ </table>
+</div>
+{% endblock %}

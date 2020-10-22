@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+  {% for cat in categorias %}
+      {% if cat.status_categoria == 'ativa' and idioma == cat.idioma %}
+        {% if cat.img_categoria %}
+              <div class="prod-menu">
+                <a href="{% url 'viewProdutosCategoria' cat.id %}"> <h3> {{ cat.nome_categoria }} </h3> <img src="{{ cat.img_categoria.url }}" class="box-menu img">  </a>
+              </div>
+        {% endif %}
+      {% endif %}
+  {% endfor %}
+{% endblock %}

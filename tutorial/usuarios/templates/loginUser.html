@@ -1,0 +1,18 @@
+{% extends 'base2.html' %}
+{% load i18n %}
+
+{% block content %}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <form method="post">
+    {% csrf_token %}
+      <h2> {% trans "Efetuar Login" %} </h2>
+      <p><label for="id_username">{% trans "Usuário" %}:</label> <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username"></p>
+      <p><label for="id_password">{% trans "Senha" %}:</label> <input type="password" name="password" autocomplete="current-password" required id="id_password"></p>
+      <button type="submit" name="button">Login</button> </br></br>
+      <a href="/usuarios/resetPassword/"> {% trans "Esqueceu a senha?" %} <a>
+  </form>
+</div>
+{% endblock %}

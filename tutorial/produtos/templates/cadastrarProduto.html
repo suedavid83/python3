@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block head %}
+<title> {% trans "Cadastro de Produtos" %} </title>
+<script>
+function fileSelect(id, e){
+    var filename = e.target.files[0].name;
+    el = document.getElementById("arq-select");
+  	$('#arq-select').html(filename);
+};
+</script>
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+  <h1> {% trans "Cadastro de Produtos" %} </h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <p><label for="id_codigo_produto">{% trans "Código Produto" %}:</label> <input type="text" name="codigo_produto" maxlength="10" id="id_codigo_produto"></p>
+      <p><label for="id_nome_produto">{% trans "Nome Produto" %}:</label> <input type="text" name="nome_produto" maxlength="50" required id="id_nome_produto"></p>
+      <p><label for="id_descricao_produto">{% trans "Descrição Produto" %}:</label> <input type="text" name="descricao_produto" maxlength="200" id="id_descricao_produto"></p>
+      <p><label for="id_preco_produto">{% trans "Preço Produto" %}:</label> <input type="number" name="preco_produto" step="0.01" id="id_preco_produto"></p>
+      <p><label for="id_status_produto">{% trans "Status Produto" %}:</label> <select name="status_produto" id="id_status_produto">
+          <option value="ativo">{% trans "Ativo" %}</option>
+          <option value="inativo">{% trans "Inativo" %}</option>
+      </select></p>
+      <p><label for="id_img_produto">{% trans "Imagem Produto" %}:</label>
+        <label for="img_produto" class="btn-file">{% trans "Escolher arquivo" %}</label>
+          <div id="arq-select"> {% trans "Nenhum arquivo selecionado" %} </div>
+            <input id="img_produto" type="file" name="img_produto" onchange='fileSelect(img_produto, event)' />
+      <p><label for="id_idioma">{% trans "Idioma" %}:</label> <select name="idioma" required id="id_idioma">
+        {% for idioma in idiomas %}
+          <option value="{{ idioma.codigo }}"> {{idioma.codigo }} </option>
+        {% endfor %}
+      </select></p>
+      <p><label for="id_categoria">{% trans "Categoria" %}:</label> <select name="categoria" required id="id_categoria">
+          <option value="" selected>---------</option>
+          {% for categoria in categorias %}
+                <option value="{{categoria.id}}">{{categoria.nome_categoria}}</option>
+          {% endfor %}
+      </select></p>
+        <button type="submit"> {% trans "Cadastrar" %} </button>
+    </form>
+</div>
+{% endblock %}
